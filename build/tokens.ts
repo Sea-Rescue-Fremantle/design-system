@@ -370,6 +370,21 @@ export const tokens = {
     "compact": "16px",
     "medium": "24px",
     "expanded": "32px"
+  },
+  "layout": {
+    "topBarHeight": "64px",
+    "navBarHeight": "80px",
+    "navRailWidth": "80px",
+    "navDrawerWidth": "360px",
+    "listPaneWidth": "400px",
+    "detailPaneMinWidth": "480px",
+    "supportingPaneWidth": "360px",
+    "tileMinWidth": "320px",
+    "mapMinHeight": "420px",
+    "formMaxWidth": "720px",
+    "readingMaxWidth": "680px",
+    "authCardMaxWidth": "440px",
+    "pageMaxWidth": "1280px"
   }
 } as const;
 

@@ -14,6 +14,7 @@ Read this file before writing any UI. It is the contract; the docs page
 | `build/tokens.css` | CSS custom properties, both schemes, Material Web bridge | **No — generated** |
 | `build/tokens.ts` | Typed token object, `StatusName`, `STATUS_ORDER` | **No — generated** |
 | `src/theme.ts` | MUI `lightTheme` / `darkTheme`, `statusColors()` | Yes |
+| `src/layouts/` | The seven page layouts + `useWindowSizeClass` | Yes |
 | `scripts/build-tokens.mjs` | The generator | Yes |
 
 After editing `tokens.dtcg.json`, run `npm run tokens`. Never hand-edit `build/`.
@@ -25,6 +26,7 @@ Never import `tokens.dtcg.json` at runtime.
 // React
 import { lightTheme, darkTheme } from '@rescue/design-system/theme';
 import { tokens, STATUS_ORDER, type StatusName } from '@rescue/design-system/tokens';
+import { AppShell, DashboardLayout } from '@rescue/design-system/layouts';
 ```
 
 ```html
@@ -66,7 +68,10 @@ Dark scheme: `<html data-scheme="dark">`, or leave it off and
 8. **Layout follows the window size class.** Compact → single column +
    navigation bar. Medium → navigation rail. Expanded+ → rail or permanent
    drawer, content capped at `tokens.size.contentMaxWidth`. Tables become
-   two-line lists on compact; they never scroll sideways.
+   two-line lists on compact; they never scroll sideways. Never write a page
+   shell, gutter or column grid by hand — use a layout from `src/layouts/`
+   (below) and read the size class from `useWindowSizeClass()`, never from
+   `window.innerWidth`.
 9. **Motion confirms, never decorates.** Four durations, `easing.standard`.
    Honour `prefers-reduced-motion`. Only `distress` may pulse.
 10. **Every screen ships empty, loading and error states.** An improvised blank
@@ -76,6 +81,45 @@ Dark scheme: `<html data-scheme="dark">`, or leave it off and
 12. **Copy is plain and calm.** Sentence case everywhere including buttons.
     24-hour time (`HHMM` in radio and incident contexts). Australian English.
     Numerals for quantities. No exclamation marks in operational UI.
+
+## Page layouts
+
+Every screen is one of seven layouts. There is no eighth: a screen that fits
+none of these is a screen whose job isn't decided yet. All of them take an
+optional `sizeClass` override for tests and the docs page; in an application
+they read the window themselves.
+
+| Layout | Use for | Regions |
+| --- | --- | --- |
+| `AppShell` | Every authenticated screen — wraps one of the six below | Top bar 64px, nav (bar 80 / rail 80 / drawer 360), main |
+| `DashboardLayout` | Operations dashboard, watch overview | Map (primary, ≥ 420px), supporting pane 360, fluid tile track ≥ 320 |
+| `ListDetailLayout` | Incidents, vessels, members, documents | List pane 400 + detail ≥ 480; one pane at a time below expanded |
+| `RecordLayout` | One incident, vessel, member | Sticky identity header (ID, status, actions), body at 680, supporting pane 360 |
+| `FormLayout` | Logging, editing, multi-step reports | Single column at 720. Actions pinned to the bottom on compact |
+| `AuthLayout` | Sign in, code entry, session expired | One 440 card on the navy ground. Nothing else |
+| `SearchResultsLayout` | Search across record types | Facet rail 400 + results at 680; chips scroll horizontally on compact |
+
+Rules that hold across all of them:
+
+1. **Regions are token-sized, content is fluid.** Rail, drawer, list pane,
+   supporting pane and tile minimum come from `tokens.layout.*`. Never a
+   hand-picked width, never a fixed column count — dashboards use
+   `repeat(auto-fit, minmax(tokens.layout.tileMinWidth, 1fr))`.
+2. **The shell owns padding and the content cap.** Gutters come from
+   `gutterFor(sizeClass)` (16 / 24 / 32). A screen that sets its own page
+   padding or `maxWidth` is fighting the shell.
+3. **One layout per screen.** Layouts nest only as `AppShell` → one other.
+4. **Two panes are peers.** In list-detail the list keeps its own scroll and
+   its own selection; it is not a sidebar that resets when a record opens.
+5. **The map is the dashboard's primary region** and never appears below
+   `tokens.layout.mapMinHeight`. On compact there is no map: render
+   `compactFallback` (the list) and open the map as its own destination.
+6. **Forms stay one column at every size class.** Two-column forms cause
+   mis-keyed data, and this is where incidents get logged.
+7. **Bottom-pinned actions on compact only** — thumbs there, mouse elsewhere.
+8. **Prose has a measure.** Record bodies and results cap at
+   `tokens.layout.readingMaxWidth`, forms at `formMaxWidth`. Full-width
+   paragraphs are unreadable on a 27-inch operations screen.
 
 ## Component selection
 
@@ -96,6 +140,7 @@ Dark scheme: `<html data-scheme="dark">`, or leave it off and
 | Top-level nav, expanded | Navigation rail or drawer |
 | Top-level nav, compact | Navigation bar, ≤ 5 destinations |
 | Sibling views in one screen | Tabs, ≤ 5 |
+| A page — any page | A layout from `src/layouts/`, inside `AppShell` |
 
 ## Identifiers and data
 

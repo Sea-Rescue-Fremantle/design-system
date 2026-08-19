@@ -12,21 +12,9 @@ working ground, rescue orange reserved as a signal, never a decoration.
 
 ## Install
 
-The package is not published to npm. Install it straight from this repository —
-npm builds it for you on install (the `prepare` script runs `npm run build`):
-
 ```bash
-npm install github:Sea-Rescue-Fremantle/design-system
+npm install @sea-rescue-fremantle/design-system
 ```
-
-Pin a release by appending a tag, which is what applications should do:
-
-```bash
-npm install github:Sea-Rescue-Fremantle/design-system#v1.0.0
-```
-
-The repository is public, so this needs no credentials — it works on a
-developer laptop and a CI runner alike.
 
 ## Use
 
@@ -53,6 +41,23 @@ emits `--md-sys-*` aliases alongside its own `--rmd-*` tokens:
 <link rel="stylesheet" href="node_modules/@sea-rescue-fremantle/design-system/build/tokens.css">
 ```
 
+### Page layouts
+
+Every screen is one of seven layouts — `AppShell` wrapping one of
+`DashboardLayout`, `ListDetailLayout`, `RecordLayout`, `FormLayout`,
+`AuthLayout` or `SearchResultsLayout`. Regions are sized from
+`tokens.layout.*`; the shell owns the gutters and the content cap, so screens
+never set their own page padding. Branch on `useWindowSizeClass()`, never on
+`window.innerWidth`.
+
+```tsx
+import { AppShell, ListDetailLayout } from '@sea-rescue-fremantle/design-system/layouts';
+
+<AppShell title="Incidents" navigation={<Destinations />}>
+  <ListDetailLayout list={<IncidentList />} detail={<Incident />} selected={open} />
+</AppShell>
+```
+
 Dark scheme: set `<html data-scheme="dark">`, or omit it and let
 `prefers-color-scheme` decide.
 
@@ -67,6 +72,7 @@ build/                    GENERATED. Committed so consumers need no build step.
 src/
   theme.ts                MUI lightTheme / darkTheme, statusColors()
   components/             Components the system guarantees
+  layouts/                The seven page layouts + useWindowSizeClass()
 docs/index.html           The documentation page (GitHub Pages)
 AGENTS.md                 Build rules — read by humans and coding agents
 ```
@@ -104,14 +110,11 @@ selector in `eslint.config.mjs`. In that order — the token file leads.
 ## Versioning
 
 Semver. A token value change is a minor; removing or renaming a token, or
-changing a component's props, is a major. A release is a tag — there is no
-publish step, because consumers install from the tag directly:
+changing a component's props, is a major. Releases publish from a tag:
 
 ```bash
 npm version minor && git push --follow-tags
 ```
-
-Applications then move their `#v…` pin when they are ready to take the change.
 
 ## Provenance
 

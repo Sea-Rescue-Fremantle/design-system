@@ -340,5 +340,23 @@
     "compact": { "$value": "16px" },
     "medium": { "$value": "24px" },
     "expanded": { "$value": "32px" }
+  },
+
+  "layout": {
+    "$type": "dimension",
+    "$description": "Region sizes for the page layouts. Regions are fixed by these; everything else is fluid.",
+    "topBarHeight": { "$value": "64px", "$description": "Top app bar, all size classes." },
+    "navBarHeight": { "$value": "80px", "$description": "Compact bottom navigation bar." },
+    "navRailWidth": { "$value": "80px", "$description": "Medium and expanded navigation rail." },
+    "navDrawerWidth": { "$value": "360px", "$description": "Permanent drawer, large and above." },
+    "listPaneWidth": { "$value": "400px", "$description": "List pane in list-detail, expanded and above." },
+    "detailPaneMinWidth": { "$value": "480px", "$description": "Below this the detail pane goes full-screen instead." },
+    "supportingPaneWidth": { "$value": "360px", "$description": "Right-hand supporting pane: activity, crew, attachments." },
+    "tileMinWidth": { "$value": "320px", "$description": "Dashboard tile track minimum." },
+    "mapMinHeight": { "$value": "420px", "$description": "Map region floor. Below it, show the list instead of a map." },
+    "formMaxWidth": { "$value": "720px", "$description": "Single-column form measure." },
+    "readingMaxWidth": { "$value": "680px", "$description": "Prose measure — record notes, public articles." },
+    "authCardMaxWidth": { "$value": "440px", "$description": "Sign-in card." },
+    "pageMaxWidth": { "$value": "{size.contentMaxWidth}" }
   }
 }

@@ -183,6 +183,32 @@
   --rmd-gutter-medium: 24px;
   /* gutter.expanded */
   --rmd-gutter-expanded: 32px;
+  /* layout.topBarHeight */
+  --rmd-layout-top-bar-height: 64px;
+  /* layout.navBarHeight */
+  --rmd-layout-nav-bar-height: 80px;
+  /* layout.navRailWidth */
+  --rmd-layout-nav-rail-width: 80px;
+  /* layout.navDrawerWidth */
+  --rmd-layout-nav-drawer-width: 360px;
+  /* layout.listPaneWidth */
+  --rmd-layout-list-pane-width: 400px;
+  /* layout.detailPaneMinWidth */
+  --rmd-layout-detail-pane-min-width: 480px;
+  /* layout.supportingPaneWidth */
+  --rmd-layout-supporting-pane-width: 360px;
+  /* layout.tileMinWidth */
+  --rmd-layout-tile-min-width: 320px;
+  /* layout.mapMinHeight */
+  --rmd-layout-map-min-height: 420px;
+  /* layout.formMaxWidth */
+  --rmd-layout-form-max-width: 720px;
+  /* layout.readingMaxWidth */
+  --rmd-layout-reading-max-width: 680px;
+  /* layout.authCardMaxWidth */
+  --rmd-layout-auth-card-max-width: 440px;
+  /* layout.pageMaxWidth */
+  --rmd-layout-page-max-width: var(--rmd-size-content-max-width);
   /* color.scheme */
   --rmd-color-primary: var(--rmd-color-palette-navy-700);
   --rmd-color-on-primary: var(--rmd-color-palette-text-on-color);

@@ -8,6 +8,16 @@
 <body>
 <x-dc>
 
+<template id="__bundler_thumbnail" data-bg-color="#0F3B63">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0F3B63"></rect>
+    <circle cx="600" cy="360" r="150" fill="#FFFFFF"></circle>
+    <rect x="420" y="560" width="360" height="20" rx="10" fill="#CFE1F2"></rect>
+    <rect x="470" y="610" width="260" height="20" rx="10" fill="#7BA1C6"></rect>
+    <rect x="520" y="660" width="160" height="20" rx="10" fill="#3C6C99"></rect>
+  </svg>
+</template>
+
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +73,7 @@
       </div>
       <div style="display: flex; flex-direction: column; gap: 2px;">
         <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7BA1C6; padding: 0 10px 6px;">Patterns</div>
+        <a href="#layouts" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Page layouts</a>
         <a href="#ops" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Operations dashboard</a>
         <a href="#public" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Public page</a>
         <a href="#email" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Email</a>
@@ -749,6 +760,226 @@
         </div>
       </section>
 
+      <section id="layouts" style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #D2500F;">Patterns</div>
+          <h2 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 34px; line-height: 42px; font-weight: 600; letter-spacing: -0.015em;">Page layouts</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 26px; color: #47586A; max-width: 700px; text-wrap: pretty;">Seven layouts cover every screen in the system. They ship as React components in <code style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">@rescue/design-system/layouts</code> &mdash; regions sized from <code style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">tokens.layout.*</code>, content fluid between them. A screen that fits none of these is a screen whose job isn&rsquo;t decided yet.</p>
+        </div>
+
+        <div style="border: 1px solid #C8D3DD; border-radius: 16px; overflow: hidden; background: #FFFFFF;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+            <thead>
+              <tr style="background: #EEF3F7; text-align: left;">
+                <th style="padding: 12px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Size class</th>
+                <th style="padding: 12px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">From</th>
+                <th style="padding: 12px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Navigation</th>
+                <th style="padding: 12px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Panes</th>
+                <th style="padding: 12px 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Gutter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-top: 1px solid #DDE5EB;">
+                <td style="padding: 12px 16px; height: 48px; font-weight: 600;">Compact</td>
+                <td style="padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-variant-numeric: tabular-nums;">0</td>
+                <td style="padding: 12px 16px; color: #47586A;">Bottom bar, &le; 5 destinations</td>
+                <td style="padding: 12px 16px; color: #47586A;">One at a time</td>
+                <td style="padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">16px</td>
+              </tr>
+              <tr style="border-top: 1px solid #DDE5EB;">
+                <td style="padding: 12px 16px; height: 48px; font-weight: 600;">Medium</td>
+                <td style="padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-variant-numeric: tabular-nums;">600</td>
+                <td style="padding: 12px 16px; color: #47586A;">Rail, 80px</td>
+                <td style="padding: 12px 16px; color: #47586A;">One at a time</td>
+                <td style="padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">24px</td>
+              </tr>
+              <tr style="border-top: 1px solid #DDE5EB;">
+                <td style="padding: 12px 16px; height: 48px; font-weight: 600;">Expanded</td>
+                <td style="padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-variant-numeric: tabular-nums;">840</td>
+                <td style="padding: 12px 16px; color: #47586A;">Rail, 80px</td>
+                <td style="padding: 12px 16px; color: #47586A;">Two &mdash; list + detail, map + supporting</td>
+                <td style="padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">32px</td>
+              </tr>
+              <tr style="border-top: 1px solid #DDE5EB;">
+                <td style="padding: 12px 16px; height: 48px; font-weight: 600;">Large</td>
+                <td style="padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-variant-numeric: tabular-nums;">1200</td>
+                <td style="padding: 12px 16px; color: #47586A;">Permanent drawer, 360px</td>
+                <td style="padding: 12px 16px; color: #47586A;">Two, content capped at 1280px</td>
+                <td style="padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">32px</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; max-width: 700px;">Read the class from <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">useWindowSizeClass()</code> &mdash; never from <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">window.innerWidth</code>, and never at any other threshold.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+
+          <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="background: #F4F7FA; padding: 16px; border-bottom: 1px solid #DDE5EB;">
+              <div style="height: 168px; border-radius: 10px; overflow: hidden; display: grid; grid-template-columns: 34px minmax(0, 1fr); border: 1px solid #C8D3DD; background: #FFFFFF;">
+                <div style="background: #06233E; display: flex; flex-direction: column; align-items: center; gap: 8px; padding-top: 10px;">
+                  <span style="width: 16px; height: 16px; border-radius: 5px; background: #9EC5E8;"></span>
+                  <span style="width: 16px; height: 16px; border-radius: 5px; background: #1C4A73;"></span>
+                  <span style="width: 16px; height: 16px; border-radius: 5px; background: #1C4A73;"></span>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                  <div style="height: 26px; background: #0F3B63; display: flex; align-items: center; padding: 0 10px;"><span style="font-size: 9px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #CFE1F2;">Top bar 64</span></div>
+                  <div style="flex: 1; display: grid; place-items: center; background: #EEF3F7;"><span style="font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">Main</span></div>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; color: #0F3B63;">AppShell</div>
+              <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; text-wrap: pretty;">Wraps every authenticated screen. Owns the scroll container, the gutters and the 1280px cap; <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">bleed</code> drops both for maps and dashboards. Navigation changes shape with the size class and nothing else.</p>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="background: #F4F7FA; padding: 16px; border-bottom: 1px solid #DDE5EB;">
+              <div style="height: 168px; border-radius: 10px; border: 1px solid #C8D3DD; background: #FFFFFF; padding: 8px; display: flex; flex-direction: column; gap: 8px;">
+                <div style="flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 74px; gap: 8px;">
+                  <div style="border-radius: 8px; background: #CFE1F2; display: grid; place-items: center; border: 1px solid #9EC5E8;"><span style="font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #0F3B63;">Map &ge; 420</span></div>
+                  <div style="border-radius: 8px; background: #EEF3F7; display: grid; place-items: center; border: 1px solid #DDE5EB;"><span style="font-size: 9px; font-weight: 600; text-align: center; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Support 360</span></div>
+                </div>
+                <div style="height: 44px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+                  <div style="border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB;"></div>
+                  <div style="border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB;"></div>
+                  <div style="border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB; display: grid; place-items: center;"><span style="font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Tiles &ge; 320</span></div>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; color: #0F3B63;">DashboardLayout</div>
+              <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; text-wrap: pretty;">The map is the primary region and never renders shorter than 420px. Tiles are a fluid <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">auto-fit</code> track, never a fixed column count. On compact there is no map: the incident list is the screen and the map becomes its own destination.</p>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="background: #F4F7FA; padding: 16px; border-bottom: 1px solid #DDE5EB;">
+              <div style="height: 168px; border-radius: 10px; border: 1px solid #C8D3DD; background: #FFFFFF; padding: 8px; display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 8px;">
+                <div style="border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB; padding: 8px; display: flex; flex-direction: column; gap: 6px;">
+                  <span style="height: 14px; border-radius: 4px; background: #CFE1F2;"></span>
+                  <span style="height: 14px; border-radius: 4px; background: #DDE5EB;"></span>
+                  <span style="height: 14px; border-radius: 4px; background: #DDE5EB;"></span>
+                  <span style="font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A; margin-top: auto;">List 400</span>
+                </div>
+                <div style="border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB; display: grid; place-items: center;"><span style="font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">Detail &ge; 480</span></div>
+              </div>
+            </div>
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; color: #0F3B63;">ListDetailLayout</div>
+              <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; text-wrap: pretty;">Incidents, vessels, members, documents. The two panes are peers: the list keeps its own scroll and selection, so opening a record never loses your place. Below expanded, one pane at a time with a back affordance.</p>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="background: #F4F7FA; padding: 16px; border-bottom: 1px solid #DDE5EB;">
+              <div style="height: 168px; border-radius: 10px; border: 1px solid #C8D3DD; background: #FFFFFF; padding: 8px; display: flex; flex-direction: column; gap: 8px;">
+                <div style="border-bottom: 1px solid #DDE5EB; padding-bottom: 8px; display: flex; flex-direction: column; gap: 4px;">
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #47586A;">INC-2026-0431</span>
+                  <span style="height: 12px; width: 60%; border-radius: 4px; background: #C8D3DD;"></span>
+                  <span style="height: 12px; width: 64px; border-radius: 4px; background: #FFB68C;"></span>
+                </div>
+                <div style="flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 74px; gap: 8px;">
+                  <div style="border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB; display: grid; place-items: center;"><span style="font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Body 680</span></div>
+                  <div style="border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB; display: grid; place-items: center;"><span style="font-size: 9px; font-weight: 600; text-align: center; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Support 360</span></div>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; color: #0F3B63;">RecordLayout</div>
+              <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; text-wrap: pretty;">One incident, vessel or member. The header answers what it is, what state it&rsquo;s in and what you can do about it &mdash; identifier in mono, one <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">StatusChip</code>, at most one filled action. Notes and history cap at the prose measure.</p>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="background: #F4F7FA; padding: 16px; border-bottom: 1px solid #DDE5EB;">
+              <div style="height: 168px; border-radius: 10px; border: 1px solid #C8D3DD; background: #FFFFFF; padding: 8px; display: flex; justify-content: center;">
+                <div style="width: 66%; display: flex; flex-direction: column; gap: 8px;">
+                  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px;">
+                    <span style="height: 4px; border-radius: 999px; background: #0F3B63;"></span>
+                    <span style="height: 4px; border-radius: 999px; background: #0F3B63;"></span>
+                    <span style="height: 4px; border-radius: 999px; background: #DDE5EB;"></span>
+                    <span style="height: 4px; border-radius: 999px; background: #DDE5EB;"></span>
+                  </div>
+                  <span style="height: 26px; border-radius: 6px; border: 1px solid #C8D3DD;"></span>
+                  <span style="height: 26px; border-radius: 6px; border: 1px solid #C8D3DD;"></span>
+                  <span style="height: 26px; border-radius: 6px; border: 1px solid #C8D3DD;"></span>
+                  <div style="margin-top: auto; display: flex; justify-content: flex-end; gap: 6px;">
+                    <span style="height: 20px; width: 44px; border-radius: 999px; background: #EEF3F7; border: 1px solid #C8D3DD;"></span>
+                    <span style="height: 20px; width: 52px; border-radius: 999px; background: #0F3B63;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; color: #0F3B63;">FormLayout</div>
+              <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; text-wrap: pretty;">One column at 720px, at every size class &mdash; two-column forms cause mis-keyed data, and this is where incidents get logged. Multi-step forms show a progress line, not a wizard: crews abandon and resume, so every step stays reachable. Actions pin to the bottom on compact only.</p>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="background: #F4F7FA; padding: 16px; border-bottom: 1px solid #DDE5EB;">
+              <div style="height: 168px; border-radius: 10px; border: 1px solid #C8D3DD; background: #06233E; display: grid; place-items: center; padding: 16px;">
+                <div style="width: 62%; background: #FFFFFF; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 2px 6px rgba(6,20,32,0.24);">
+                  <span style="height: 10px; width: 46%; border-radius: 4px; background: #C8D3DD;"></span>
+                  <span style="height: 24px; border-radius: 6px; border: 1px solid #C8D3DD;"></span>
+                  <span style="height: 24px; border-radius: 999px; background: #0F3B63;"></span>
+                  <span style="font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A; text-align: center;">440</span>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; color: #0F3B63;">AuthLayout</div>
+              <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; text-wrap: pretty;">Sign in, code entry, session expired. One 440px card on the navy ground &mdash; no marketing, no illustration, no second column. A volunteer signing in at 0300 wants one field and one button.</p>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="background: #F4F7FA; padding: 16px; border-bottom: 1px solid #DDE5EB;">
+              <div style="height: 168px; border-radius: 10px; border: 1px solid #C8D3DD; background: #FFFFFF; padding: 8px; display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 8px;">
+                <div style="border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB; padding: 8px; display: flex; flex-direction: column; gap: 6px;">
+                  <span style="height: 8px; width: 70%; border-radius: 4px; background: #C8D3DD;"></span>
+                  <span style="height: 8px; width: 84%; border-radius: 4px; background: #DDE5EB;"></span>
+                  <span style="height: 8px; width: 60%; border-radius: 4px; background: #DDE5EB;"></span>
+                  <span style="font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A; margin-top: auto;">Facets 400</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                  <span style="height: 10px; width: 56%; border-radius: 4px; background: #C8D3DD;"></span>
+                  <div style="display: flex; gap: 4px;">
+                    <span style="height: 14px; width: 34px; border-radius: 999px; background: #CFE1F2;"></span>
+                    <span style="height: 14px; width: 28px; border-radius: 999px; background: #EEF3F7; border: 1px solid #DDE5EB;"></span>
+                    <span style="height: 14px; width: 30px; border-radius: 999px; background: #EEF3F7; border: 1px solid #DDE5EB;"></span>
+                  </div>
+                  <span style="flex: 1; border-radius: 8px; background: #EEF3F7; border: 1px solid #DDE5EB;"></span>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500; color: #0F3B63;">SearchResultsLayout</div>
+              <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; text-wrap: pretty;">One search across incidents, vessels, members and documents. The count and the active filters are always visible &mdash; someone hunting a callsign needs to know whether a filter is hiding it. Results with a status sort by severity, then recency.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">A screen, assembled</div>
+          <pre style="margin: 0; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 22px; color: #101C27; background: #F4F7FA; border: 1px solid #DDE5EB; border-radius: 12px; padding: 16px;">import { AppShell, ListDetailLayout } from '@rescue/design-system/layouts';
+
+&lt;AppShell title="Incidents" navigation={&lt;Destinations /&gt;} actions={&lt;NewIncident /&gt;}&gt;
+  &lt;ListDetailLayout
+    list={&lt;IncidentList onSelect={setId} /&gt;}
+    detail={&lt;Incident id={id} /&gt;}
+    selected={Boolean(id)}
+    onBack={() =&gt; setId(null)}
+    empty={&lt;SelectARecord /&gt;}
+  /&gt;
+&lt;/AppShell&gt;</pre>
+          <p style="margin: 0; font-size: 14px; line-height: 22px; color: #47586A; max-width: 700px; text-wrap: pretty;">Layouts nest exactly one level: <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">AppShell</code> plus one of the other six. Screens never set their own page padding or max width &mdash; the shell owns both.</p>
+        </div>
+      </section>
+
       <section id="ops" style="display: flex; flex-direction: column; gap: 24px;">
         <div style="display: flex; flex-direction: column; gap: 8px;">
           <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #D2500F;">Patterns</div>
@@ -921,7 +1152,7 @@ class Component extends DCLogic {
       ? `import Button from '@mui/material/Button';\n\n// Highest priority — one per view\n<Button variant="contained">Log on</Button>\n\n// Secondary\n<Button variant="outlined">Cancel</Button>\n\n// Emergency — tertiary maps to palette.warning\n<Button variant="contained" color="warning" size="large"\n        startIcon={<SosIcon />} sx={{ minHeight: 48 }}>\n  Log an emergency\n</Button>\n\n// Destructive — outlined, never filled\n<Button variant="outlined" color="error">Stand down asset</Button>`
       : `<!-- Material Web -->\n${S} type="module">\n  import '@material/web/button/filled-button.js';\n  import '@material/web/button/outlined-button.js';\n${ES}\n\n<md-filled-button>Log on</md-filled-button>\n<md-outlined-button>Cancel</md-outlined-button>\n\n<!-- Emergency: tertiary token override, 48px target -->\n<md-filled-button class="emergency" has-icon>\n  <md-icon slot="icon">sos</md-icon>Log an emergency\n</md-filled-button>\n\n<style>\n  .emergency {\n    --md-filled-button-container-color: var(--md-sys-color-tertiary);\n    --md-filled-button-label-text-color: var(--md-sys-color-on-tertiary);\n    --md-filled-button-container-height: 48px;\n  }\n</style>`;
     const themeCode = isMui
-      ? `npm install github:Sea-Rescue-Fremantle/design-system\n\n// The theme is not assembled per app — import it.\nimport { ThemeProvider, CssBaseline } from '@mui/material';\nimport { lightTheme, darkTheme, StatusChip }\n  from '@sea-rescue-fremantle/design-system';\nimport '@sea-rescue-fremantle/design-system/tokens.css';\n\nexport function App({ operational }) {\n  return (\n    <ThemeProvider theme={operational ? darkTheme : lightTheme}>\n      <CssBaseline />\n      <StatusChip status="distress" pulse />\n    </ThemeProvider>\n  );\n}\n\n// Reaching for a raw value? It belongs in tokens.dtcg.json.\nimport { tokens, STATUS_ORDER } from '@sea-rescue-fremantle/design-system';`
+      ? `npm install @sea-rescue-fremantle/design-system\n\n// The theme is not assembled per app — import it.\nimport { ThemeProvider, CssBaseline } from '@mui/material';\nimport { lightTheme, darkTheme, StatusChip }\n  from '@sea-rescue-fremantle/design-system';\nimport '@sea-rescue-fremantle/design-system/tokens.css';\n\nexport function App({ operational }) {\n  return (\n    <ThemeProvider theme={operational ? darkTheme : lightTheme}>\n      <CssBaseline />\n      <StatusChip status="distress" pulse />\n    </ThemeProvider>\n  );\n}\n\n// Reaching for a raw value? It belongs in tokens.dtcg.json.\nimport { tokens, STATUS_ORDER } from '@sea-rescue-fremantle/design-system';`
       : `<!-- All you write. Once, at the app entry point. -->\n<link rel="stylesheet"\n  href="@sea-rescue-fremantle/design-system/tokens.css">\n\n<!-- ── build/tokens.css, excerpt ─────────────────────────\n     GENERATED from tokens.dtcg.json. Never hand-edited. -->\n\n:root {\n  /* primitives — the only hexes in the system */\n  --rmd-color-palette-navy-700: #0F3B63;\n  --rmd-color-palette-orange-600: #D2500F;\n\n  /* semantic roles alias the primitives */\n  --rmd-color-primary: var(--rmd-color-palette-navy-700);\n  --rmd-color-tertiary: var(--rmd-color-palette-orange-600);\n  --rmd-color-surface: var(--rmd-color-palette-foam-100);\n\n  --rmd-shape-lg: 16px;\n  --rmd-space-xl: 24px;\n}\n\n/* one scheme swap, no recompile */\n[data-scheme="dark"] {\n  --rmd-color-primary: var(--rmd-color-palette-reversed-primary);\n  --rmd-color-surface: var(--rmd-color-palette-ink-800);\n}\n\n/* Material Web bridge — pure aliases, no duplicated values */\n:root {\n  --md-sys-color-primary: var(--rmd-color-primary);\n  --md-sys-color-tertiary: var(--rmd-color-tertiary);\n  --md-sys-shape-corner-large: var(--rmd-shape-lg);\n  --md-ref-typeface-brand: var(--rmd-font-family-display);\n}`;
     return {
       showCode: this.props.showCode ?? true,
