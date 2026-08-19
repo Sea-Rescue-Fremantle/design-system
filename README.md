@@ -12,9 +12,21 @@ working ground, rescue orange reserved as a signal, never a decoration.
 
 ## Install
 
+The package is not published to npm. Install it straight from this repository —
+npm builds it for you on install (the `prepare` script runs `npm run build`):
+
 ```bash
-npm install @sea-rescue-fremantle/design-system
+npm install github:Sea-Rescue-Fremantle/design-system
 ```
+
+Pin a release by appending a tag, which is what applications should do:
+
+```bash
+npm install github:Sea-Rescue-Fremantle/design-system#v1.0.0
+```
+
+The repository is private, so the installing machine needs read access to it —
+an SSH key for a developer, or a fine-grained read-only PAT for a build server.
 
 ## Use
 
@@ -92,11 +104,14 @@ selector in `eslint.config.mjs`. In that order — the token file leads.
 ## Versioning
 
 Semver. A token value change is a minor; removing or renaming a token, or
-changing a component's props, is a major. Releases publish from a tag:
+changing a component's props, is a major. A release is a tag — there is no
+publish step, because consumers install from the tag directly:
 
 ```bash
 npm version minor && git push --follow-tags
 ```
+
+Applications then move their `#v…` pin when they are ready to take the change.
 
 ## Provenance
 

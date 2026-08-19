@@ -11,6 +11,11 @@ import react from 'eslint-plugin-react';
 const COLOR_LITERAL = String.raw`^(#[0-9a-fA-F]{3,8}|(rgb|rgba|hsl|hsla|oklch)\(.*|white|black|red|green|blue|orange|navy|grey|gray)$`;
 
 export default tseslint.config(
+  // Global ignores. Must be its own config object with no `files` key —
+  // an `ignores` inside a config object only applies to that object, so
+  // generated output would otherwise still be linted by the recommended sets.
+  { ignores: ['build/**', 'dist/**', 'node_modules/**', 'docs/**'] },
+
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -24,7 +29,7 @@ export default tseslint.config(
 
         // ---- colour ----------------------------------------------------
         {
-          selector: `Literal[value=/${COLOR_LITERAL.slice(1, -1)}/]`,
+          selector: `Literal[value=/${COLOR_LITERAL}/]`,
           message:
             'Colour literal. Import from build/tokens.ts (tokens.color.scheme.light.primary) or use var(--rmd-color-*).',
         },
@@ -88,9 +93,20 @@ export default tseslint.config(
     },
   },
 
-  // The token build and the docs page are allowed literals.
+  // The token build and the docs page are allowed literals. The token build
+  // is also a Node script, so it gets Node globals.
   {
     files: ['scripts/**', '**/*.stories.tsx', '**/email/**'],
+    languageOptions: {
+      globals: { console: 'readonly', process: 'readonly', URL: 'readonly', fetch: 'readonly' },
+    },
+    rules: { 'no-restricted-syntax': 'off' },
+  },
+
+  // src/theme.ts is the one place the theme is allowed to be created — that is
+  // the whole point of the rule that bans createTheme everywhere else.
+  {
+    files: ['src/theme.ts'],
     rules: { 'no-restricted-syntax': 'off' },
   },
 );
