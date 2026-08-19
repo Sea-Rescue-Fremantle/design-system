@@ -1,0 +1,64 @@
+{
+  "name": "@sea-rescue-fremantle/design-system",
+  "version": "1.0.0",
+  "description": "Rescue MD3 — the Sea Rescue Fremantle design system. Material Design 3 structure, brand-led skin.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sea-Rescue-Fremantle/design-system.git"
+  },
+  "homepage": "https://sea-rescue-fremantle.github.io/design-system/",
+  "bugs": "https://github.com/Sea-Rescue-Fremantle/design-system/issues",
+  "keywords": ["design-system", "design-tokens", "dtcg", "material-design", "mui", "marine-rescue"],
+  "type": "module",
+  "sideEffects": ["**/*.css"],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "default": "./dist/theme.js"
+    },
+    "./tokens": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.js"
+    },
+    "./tokens.css": "./build/tokens.css",
+    "./tokens.dtcg.json": "./tokens.dtcg.json"
+  },
+  "files": ["dist", "build", "tokens.dtcg.json", "AGENTS.md", "README.md"],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "tokens": "node scripts/build-tokens.mjs",
+    "tokens:check": "npm run tokens && git diff --exit-code build/",
+    "build": "npm run tokens && tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "lint:css": "stylelint \"**/*.{css,scss}\"",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run tokens:check && npm run typecheck && npm run lint && npm run lint:css",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@mui/icons-material": "^6 || ^7",
+    "@mui/material": "^6 || ^7",
+    "react": "^18 || ^19"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9",
+    "@types/react": "^19",
+    "eslint": "^9",
+    "eslint-plugin-react": "^7",
+    "stylelint": "^16",
+    "stylelint-config-standard": "^36",
+    "typescript": "^5",
+    "typescript-eslint": "^8"
+  },
+  "engines": { "node": ">=20" }
+}

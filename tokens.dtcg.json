@@ -1,0 +1,344 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "$description": "Rescue MD3 — Marine Rescue Fremantle. Material Design 3 structure, brand-led skin. Source of truth: edit here, then `npm run tokens`. Never edit build/ by hand.",
+  "$extensions": {
+    "com.marinerescue.meta": {
+      "name": "Rescue MD3",
+      "version": "1.0.0",
+      "reference": "https://www.searescue.com.au/"
+    }
+  },
+
+  "color": {
+    "$type": "color",
+
+    "palette": {
+      "$description": "Primitives. The only place a hex literal may appear in this system.",
+      "navy": {
+        "100": { "$value": "#E7EFF7" },
+        "200": { "$value": "#CFE1F2" },
+        "300": { "$value": "#A8C4DF" },
+        "400": { "$value": "#7BA1C6" },
+        "500": { "$value": "#3C6C99" },
+        "600": { "$value": "#1C4A73" },
+        "700": { "$value": "#0F3B63" },
+        "800": { "$value": "#0A2C4B" },
+        "900": { "$value": "#06233E" }
+      },
+      "slate": {
+        "100": { "$value": "#EEF2F6" },
+        "200": { "$value": "#DCE5EE" },
+        "300": { "$value": "#C0CDDA" },
+        "400": { "$value": "#9BAEC1" },
+        "500": { "$value": "#6D8298" },
+        "600": { "$value": "#4A6076" },
+        "700": { "$value": "#3A4E62" },
+        "800": { "$value": "#2A3B4C" },
+        "900": { "$value": "#16283A" }
+      },
+      "orange": {
+        "100": { "$value": "#FEF1E8" },
+        "200": { "$value": "#FBE0CE" },
+        "300": { "$value": "#F5BC98" },
+        "400": { "$value": "#EE9260" },
+        "500": { "$value": "#E2691F" },
+        "600": { "$value": "#D2500F" },
+        "700": { "$value": "#B0410A" },
+        "800": { "$value": "#8C3308" },
+        "900": { "$value": "#4A1902" }
+      },
+      "red": {
+        "200": { "$value": "#F9DEDC" },
+        "500": { "$value": "#B3261E" },
+        "600": { "$value": "#8C1D18" },
+        "700": { "$value": "#601410" },
+        "900": { "$value": "#410E0B" }
+      },
+      "green": {
+        "200": { "$value": "#D3EBDD" },
+        "500": { "$value": "#1E7A46" },
+        "900": { "$value": "#0B3D24" }
+      },
+      "amber": {
+        "200": { "$value": "#FBEBC8" },
+        "500": { "$value": "#A66B00" },
+        "900": { "$value": "#5C3A00" }
+      },
+      "foam": {
+        "$description": "Light-scheme surfaces.",
+        "0": { "$value": "#FFFFFF" },
+        "100": { "$value": "#FBFCFD" },
+        "200": { "$value": "#F4F7F9" },
+        "300": { "$value": "#EDF1F5" },
+        "400": { "$value": "#E5EBF0" },
+        "500": { "$value": "#DDE5EB" }
+      },
+      "ink": {
+        "$description": "Dark-scheme surfaces.",
+        "400": { "$value": "#283744" },
+        "500": { "$value": "#1E2C38" },
+        "600": { "$value": "#16232E" },
+        "700": { "$value": "#121D27" },
+        "800": { "$value": "#0D1720" },
+        "900": { "$value": "#080F16" }
+      },
+      "text": {
+        "strong": { "$value": "#101C27" },
+        "muted": { "$value": "#47586A" },
+        "onDark": { "$value": "#E4EBF1" },
+        "onDarkMuted": { "$value": "#B3C1CE" },
+        "onColor": { "$value": "#FFFFFF" }
+      },
+      "line": {
+        "strong": { "$value": "#7A8B9B" },
+        "soft": { "$value": "#C8D3DD" },
+        "onDark": { "$value": "#334656" }
+      },
+      "reversed": {
+        "$description": "Dark-scheme-only tones, on the same OKLCH lightness scale as the ramps.",
+        "primary": { "$value": "#9EC5E8" },
+        "onPrimary": { "$value": "#08304F" },
+        "secondary": { "$value": "#B4C6D8" },
+        "onSecondary": { "$value": "#22384B" },
+        "tertiary": { "$value": "#FFB68C" },
+        "error": { "$value": "#F2B8B5" }
+      }
+    },
+
+    "scheme": {
+      "light": {
+        "$description": "Public website and intranet.",
+        "primary": { "$value": "{color.palette.navy.700}" },
+        "onPrimary": { "$value": "{color.palette.text.onColor}" },
+        "primaryContainer": { "$value": "{color.palette.navy.200}" },
+        "onPrimaryContainer": { "$value": "{color.palette.navy.900}" },
+        "secondary": { "$value": "{color.palette.slate.600}" },
+        "onSecondary": { "$value": "{color.palette.text.onColor}" },
+        "secondaryContainer": { "$value": "{color.palette.slate.200}" },
+        "onSecondaryContainer": { "$value": "{color.palette.slate.900}" },
+        "tertiary": { "$value": "{color.palette.orange.600}" },
+        "onTertiary": { "$value": "{color.palette.text.onColor}" },
+        "tertiaryContainer": { "$value": "{color.palette.orange.200}" },
+        "onTertiaryContainer": { "$value": "{color.palette.orange.900}" },
+        "error": { "$value": "{color.palette.red.500}" },
+        "onError": { "$value": "{color.palette.text.onColor}" },
+        "errorContainer": { "$value": "{color.palette.red.200}" },
+        "onErrorContainer": { "$value": "{color.palette.red.900}" },
+        "surface": { "$value": "{color.palette.foam.100}" },
+        "surfaceContainerLowest": { "$value": "{color.palette.foam.0}" },
+        "surfaceContainerLow": { "$value": "{color.palette.foam.200}" },
+        "surfaceContainer": { "$value": "{color.palette.foam.300}" },
+        "surfaceContainerHigh": { "$value": "{color.palette.foam.400}" },
+        "surfaceContainerHighest": { "$value": "{color.palette.foam.500}" },
+        "onSurface": { "$value": "{color.palette.text.strong}" },
+        "onSurfaceVariant": { "$value": "{color.palette.text.muted}" },
+        "outline": { "$value": "{color.palette.line.strong}" },
+        "outlineVariant": { "$value": "{color.palette.line.soft}" },
+        "inverseSurface": { "$value": "#1A2A38" },
+        "inverseOnSurface": { "$value": "{color.palette.foam.300}" },
+        "scrim": { "$value": "rgba(6, 20, 32, 0.48)" }
+      },
+      "dark": {
+        "$description": "Operations centre, vessel tablets, night use.",
+        "primary": { "$value": "{color.palette.reversed.primary}" },
+        "onPrimary": { "$value": "{color.palette.reversed.onPrimary}" },
+        "primaryContainer": { "$value": "{color.palette.navy.600}" },
+        "onPrimaryContainer": { "$value": "{color.palette.navy.200}" },
+        "secondary": { "$value": "{color.palette.reversed.secondary}" },
+        "onSecondary": { "$value": "{color.palette.reversed.onSecondary}" },
+        "secondaryContainer": { "$value": "{color.palette.slate.700}" },
+        "onSecondaryContainer": { "$value": "{color.palette.slate.200}" },
+        "tertiary": { "$value": "{color.palette.reversed.tertiary}" },
+        "onTertiary": { "$value": "{color.palette.orange.900}" },
+        "tertiaryContainer": { "$value": "{color.palette.orange.800}" },
+        "onTertiaryContainer": { "$value": "{color.palette.orange.200}" },
+        "error": { "$value": "{color.palette.reversed.error}" },
+        "onError": { "$value": "{color.palette.red.700}" },
+        "errorContainer": { "$value": "{color.palette.red.600}" },
+        "onErrorContainer": { "$value": "{color.palette.red.200}" },
+        "surface": { "$value": "{color.palette.ink.800}" },
+        "surfaceContainerLowest": { "$value": "{color.palette.ink.900}" },
+        "surfaceContainerLow": { "$value": "{color.palette.ink.700}" },
+        "surfaceContainer": { "$value": "{color.palette.ink.600}" },
+        "surfaceContainerHigh": { "$value": "{color.palette.ink.500}" },
+        "surfaceContainerHighest": { "$value": "{color.palette.ink.400}" },
+        "onSurface": { "$value": "{color.palette.text.onDark}" },
+        "onSurfaceVariant": { "$value": "{color.palette.text.onDarkMuted}" },
+        "outline": { "$value": "{color.palette.slate.500}" },
+        "outlineVariant": { "$value": "{color.palette.line.onDark}" },
+        "inverseSurface": { "$value": "{color.palette.text.onDark}" },
+        "inverseOnSurface": { "$value": "{color.palette.ink.600}" },
+        "scrim": { "$value": "rgba(0, 0, 0, 0.6)" }
+      }
+    },
+
+    "status": {
+      "$description": "Closed vocabulary of seven. Adding an eighth is a change to this file, not to a component.",
+      "distress": {
+        "fg": { "$value": "{color.palette.red.900}" },
+        "bg": { "$value": "{color.palette.red.200}" },
+        "solid": { "$value": "{color.palette.red.500}" }
+      },
+      "urgent": {
+        "fg": { "$value": "{color.palette.orange.900}" },
+        "bg": { "$value": "{color.palette.orange.200}" },
+        "solid": { "$value": "{color.palette.orange.600}" }
+      },
+      "advisory": {
+        "fg": { "$value": "{color.palette.amber.900}" },
+        "bg": { "$value": "{color.palette.amber.200}" },
+        "solid": { "$value": "{color.palette.amber.500}" }
+      },
+      "onTask": {
+        "fg": { "$value": "{color.palette.navy.900}" },
+        "bg": { "$value": "{color.palette.navy.200}" },
+        "solid": { "$value": "{color.palette.navy.700}" }
+      },
+      "standby": {
+        "fg": { "$value": "{color.palette.slate.700}" },
+        "bg": { "$value": "{color.palette.slate.200}" },
+        "solid": { "$value": "{color.palette.slate.600}" }
+      },
+      "resolved": {
+        "fg": { "$value": "{color.palette.green.900}" },
+        "bg": { "$value": "{color.palette.green.200}" },
+        "solid": { "$value": "{color.palette.green.500}" }
+      },
+      "offline": {
+        "fg": { "$value": "{color.palette.text.muted}" },
+        "bg": { "$value": "{color.palette.foam.300}" },
+        "solid": { "$value": "{color.palette.line.strong}" }
+      }
+    }
+  },
+
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "display": { "$value": ["Archivo", "Helvetica Neue", "Arial", "sans-serif"] },
+      "body": { "$value": ["Source Sans 3", "Helvetica Neue", "Arial", "sans-serif"] },
+      "mono": { "$value": ["JetBrains Mono", "ui-monospace", "monospace"] }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": { "$value": 400 },
+      "medium": { "$value": 500 },
+      "semibold": { "$value": 600 },
+      "bold": { "$value": 700 }
+    }
+  },
+
+  "type": {
+    "$type": "typography",
+    "$description": "Material 3 type scale. Display and title roles in Archivo; body and label roles in Source Sans 3.",
+    "displayLarge": { "$value": { "fontFamily": "{font.family.display}", "fontSize": "57px", "lineHeight": "64px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "-0.02em" } },
+    "displaySmall": { "$value": { "fontFamily": "{font.family.display}", "fontSize": "36px", "lineHeight": "44px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "-0.01em" } },
+    "headlineLarge": { "$value": { "fontFamily": "{font.family.display}", "fontSize": "32px", "lineHeight": "40px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "-0.01em" } },
+    "headlineMedium": { "$value": { "fontFamily": "{font.family.display}", "fontSize": "28px", "lineHeight": "36px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "0" } },
+    "headlineSmall": { "$value": { "fontFamily": "{font.family.display}", "fontSize": "24px", "lineHeight": "32px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "0" } },
+    "titleLarge": { "$value": { "fontFamily": "{font.family.display}", "fontSize": "22px", "lineHeight": "28px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "0" } },
+    "titleMedium": { "$value": { "fontFamily": "{font.family.body}", "fontSize": "16px", "lineHeight": "24px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "0.01em" } },
+    "titleSmall": { "$value": { "fontFamily": "{font.family.body}", "fontSize": "14px", "lineHeight": "20px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "0.01em" } },
+    "bodyLarge": { "$value": { "fontFamily": "{font.family.body}", "fontSize": "16px", "lineHeight": "26px", "fontWeight": "{font.weight.regular}", "letterSpacing": "0" } },
+    "bodyMedium": { "$value": { "fontFamily": "{font.family.body}", "fontSize": "14px", "lineHeight": "22px", "fontWeight": "{font.weight.regular}", "letterSpacing": "0" } },
+    "bodySmall": { "$value": { "fontFamily": "{font.family.body}", "fontSize": "12px", "lineHeight": "18px", "fontWeight": "{font.weight.regular}", "letterSpacing": "0" } },
+    "labelLarge": { "$value": { "fontFamily": "{font.family.body}", "fontSize": "14px", "lineHeight": "20px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "0.02em" } },
+    "labelMedium": { "$value": { "fontFamily": "{font.family.body}", "fontSize": "12px", "lineHeight": "16px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "0.04em" } },
+    "labelSmall": { "$value": { "fontFamily": "{font.family.body}", "fontSize": "11px", "lineHeight": "16px", "fontWeight": "{font.weight.semibold}", "letterSpacing": "0.08em" } },
+    "code": { "$value": { "fontFamily": "{font.family.mono}", "fontSize": "13px", "lineHeight": "20px", "fontWeight": "{font.weight.regular}", "letterSpacing": "0" } }
+  },
+
+  "space": {
+    "$type": "dimension",
+    "$description": "4px base. No value outside this set.",
+    "xs": { "$value": "4px" },
+    "sm": { "$value": "8px" },
+    "md": { "$value": "12px" },
+    "lg": { "$value": "16px" },
+    "xl": { "$value": "24px" },
+    "2xl": { "$value": "32px" },
+    "3xl": { "$value": "48px" },
+    "4xl": { "$value": "64px" },
+    "5xl": { "$value": "96px" }
+  },
+
+  "shape": {
+    "$type": "dimension",
+    "none": { "$value": "0px" },
+    "xs": { "$value": "4px", "$description": "Chips." },
+    "sm": { "$value": "8px", "$description": "Status chips, snackbars." },
+    "md": { "$value": "12px", "$description": "Fields, tiles." },
+    "lg": { "$value": "16px", "$description": "Cards, FABs." },
+    "xl": { "$value": "28px", "$description": "Dialogs." },
+    "full": { "$value": "999px", "$description": "Buttons." }
+  },
+
+  "size": {
+    "$type": "dimension",
+    "$description": "Hard floors. Field use and volunteers of any age depend on these.",
+    "touchTarget": { "$value": "48px" },
+    "fieldHeight": { "$value": "56px" },
+    "buttonHeight": { "$value": "40px" },
+    "emergencyButtonHeight": { "$value": "48px" },
+    "rowHeight": { "$value": "48px" },
+    "contentMaxWidth": { "$value": "1280px" }
+  },
+
+  "elevation": {
+    "$type": "shadow",
+    "$description": "Light scheme only. In the dark scheme elevation is a lighter surface container plus a 1px outlineVariant edge.",
+    "0": { "$value": [] },
+    "1": { "$value": [
+      { "color": "rgba(6,20,32,0.16)", "offsetX": "0px", "offsetY": "1px", "blur": "2px", "spread": "0px" },
+      { "color": "rgba(6,20,32,0.08)", "offsetX": "0px", "offsetY": "1px", "blur": "3px", "spread": "1px" }
+    ] },
+    "2": { "$value": [
+      { "color": "rgba(6,20,32,0.16)", "offsetX": "0px", "offsetY": "1px", "blur": "2px", "spread": "0px" },
+      { "color": "rgba(6,20,32,0.08)", "offsetX": "0px", "offsetY": "2px", "blur": "6px", "spread": "2px" }
+    ] },
+    "3": { "$value": [
+      { "color": "rgba(6,20,32,0.16)", "offsetX": "0px", "offsetY": "1px", "blur": "3px", "spread": "0px" },
+      { "color": "rgba(6,20,32,0.10)", "offsetX": "0px", "offsetY": "4px", "blur": "8px", "spread": "3px" }
+    ] },
+    "4": { "$value": [
+      { "color": "rgba(6,20,32,0.16)", "offsetX": "0px", "offsetY": "2px", "blur": "3px", "spread": "0px" },
+      { "color": "rgba(6,20,32,0.10)", "offsetX": "0px", "offsetY": "6px", "blur": "10px", "spread": "4px" }
+    ] },
+    "5": { "$value": [
+      { "color": "rgba(6,20,32,0.16)", "offsetX": "0px", "offsetY": "4px", "blur": "4px", "spread": "0px" },
+      { "color": "rgba(6,20,32,0.10)", "offsetX": "0px", "offsetY": "8px", "blur": "12px", "spread": "6px" }
+    ] }
+  },
+
+  "duration": {
+    "$type": "duration",
+    "short": { "$value": "100ms", "$description": "Hover, focus, ripple, checkbox." },
+    "medium": { "$value": "200ms", "$description": "Menus, snackbars, chip selection." },
+    "long": { "$value": "350ms", "$description": "Dialogs, drawers, page transitions." },
+    "extraLong": { "$value": "500ms", "$description": "Distress pulse only." }
+  },
+
+  "easing": {
+    "$type": "cubicBezier",
+    "standard": { "$value": [0.2, 0, 0, 1] },
+    "decelerate": { "$value": [0, 0, 0, 1] },
+    "accelerate": { "$value": [0.3, 0, 1, 1] }
+  },
+
+  "breakpoint": {
+    "$type": "dimension",
+    "$description": "Material window size classes. These decide navigation and column count; nothing else adapts on its own.",
+    "compact": { "$value": "0px" },
+    "medium": { "$value": "600px" },
+    "expanded": { "$value": "840px" },
+    "large": { "$value": "1200px" },
+    "extraLarge": { "$value": "1600px" }
+  },
+
+  "gutter": {
+    "$type": "dimension",
+    "compact": { "$value": "16px" },
+    "medium": { "$value": "24px" },
+    "expanded": { "$value": "32px" }
+  }
+}

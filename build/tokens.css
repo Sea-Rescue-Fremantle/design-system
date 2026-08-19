@@ -1,0 +1,404 @@
+/* GENERATED FROM tokens.dtcg.json — do not edit. Run `npm run tokens`. */
+
+:root {
+  /* color.palette */
+  --rmd-color-palette-navy-100: #E7EFF7;
+  --rmd-color-palette-navy-200: #CFE1F2;
+  --rmd-color-palette-navy-300: #A8C4DF;
+  --rmd-color-palette-navy-400: #7BA1C6;
+  --rmd-color-palette-navy-500: #3C6C99;
+  --rmd-color-palette-navy-600: #1C4A73;
+  --rmd-color-palette-navy-700: #0F3B63;
+  --rmd-color-palette-navy-800: #0A2C4B;
+  --rmd-color-palette-navy-900: #06233E;
+  --rmd-color-palette-slate-100: #EEF2F6;
+  --rmd-color-palette-slate-200: #DCE5EE;
+  --rmd-color-palette-slate-300: #C0CDDA;
+  --rmd-color-palette-slate-400: #9BAEC1;
+  --rmd-color-palette-slate-500: #6D8298;
+  --rmd-color-palette-slate-600: #4A6076;
+  --rmd-color-palette-slate-700: #3A4E62;
+  --rmd-color-palette-slate-800: #2A3B4C;
+  --rmd-color-palette-slate-900: #16283A;
+  --rmd-color-palette-orange-100: #FEF1E8;
+  --rmd-color-palette-orange-200: #FBE0CE;
+  --rmd-color-palette-orange-300: #F5BC98;
+  --rmd-color-palette-orange-400: #EE9260;
+  --rmd-color-palette-orange-500: #E2691F;
+  --rmd-color-palette-orange-600: #D2500F;
+  --rmd-color-palette-orange-700: #B0410A;
+  --rmd-color-palette-orange-800: #8C3308;
+  --rmd-color-palette-orange-900: #4A1902;
+  --rmd-color-palette-red-200: #F9DEDC;
+  --rmd-color-palette-red-500: #B3261E;
+  --rmd-color-palette-red-600: #8C1D18;
+  --rmd-color-palette-red-700: #601410;
+  --rmd-color-palette-red-900: #410E0B;
+  --rmd-color-palette-green-200: #D3EBDD;
+  --rmd-color-palette-green-500: #1E7A46;
+  --rmd-color-palette-green-900: #0B3D24;
+  --rmd-color-palette-amber-200: #FBEBC8;
+  --rmd-color-palette-amber-500: #A66B00;
+  --rmd-color-palette-amber-900: #5C3A00;
+  --rmd-color-palette-foam-0: #FFFFFF;
+  --rmd-color-palette-foam-100: #FBFCFD;
+  --rmd-color-palette-foam-200: #F4F7F9;
+  --rmd-color-palette-foam-300: #EDF1F5;
+  --rmd-color-palette-foam-400: #E5EBF0;
+  --rmd-color-palette-foam-500: #DDE5EB;
+  --rmd-color-palette-ink-400: #283744;
+  --rmd-color-palette-ink-500: #1E2C38;
+  --rmd-color-palette-ink-600: #16232E;
+  --rmd-color-palette-ink-700: #121D27;
+  --rmd-color-palette-ink-800: #0D1720;
+  --rmd-color-palette-ink-900: #080F16;
+  --rmd-color-palette-text-strong: #101C27;
+  --rmd-color-palette-text-muted: #47586A;
+  --rmd-color-palette-text-on-dark: #E4EBF1;
+  --rmd-color-palette-text-on-dark-muted: #B3C1CE;
+  --rmd-color-palette-text-on-color: #FFFFFF;
+  --rmd-color-palette-line-strong: #7A8B9B;
+  --rmd-color-palette-line-soft: #C8D3DD;
+  --rmd-color-palette-line-on-dark: #334656;
+  --rmd-color-palette-reversed-primary: #9EC5E8;
+  --rmd-color-palette-reversed-on-primary: #08304F;
+  --rmd-color-palette-reversed-secondary: #B4C6D8;
+  --rmd-color-palette-reversed-on-secondary: #22384B;
+  --rmd-color-palette-reversed-tertiary: #FFB68C;
+  --rmd-color-palette-reversed-error: #F2B8B5;
+  /* color.status */
+  --rmd-color-status-distress-fg: var(--rmd-color-palette-red-900);
+  --rmd-color-status-distress-bg: var(--rmd-color-palette-red-200);
+  --rmd-color-status-distress-solid: var(--rmd-color-palette-red-500);
+  --rmd-color-status-urgent-fg: var(--rmd-color-palette-orange-900);
+  --rmd-color-status-urgent-bg: var(--rmd-color-palette-orange-200);
+  --rmd-color-status-urgent-solid: var(--rmd-color-palette-orange-600);
+  --rmd-color-status-advisory-fg: var(--rmd-color-palette-amber-900);
+  --rmd-color-status-advisory-bg: var(--rmd-color-palette-amber-200);
+  --rmd-color-status-advisory-solid: var(--rmd-color-palette-amber-500);
+  --rmd-color-status-on-task-fg: var(--rmd-color-palette-navy-900);
+  --rmd-color-status-on-task-bg: var(--rmd-color-palette-navy-200);
+  --rmd-color-status-on-task-solid: var(--rmd-color-palette-navy-700);
+  --rmd-color-status-standby-fg: var(--rmd-color-palette-slate-700);
+  --rmd-color-status-standby-bg: var(--rmd-color-palette-slate-200);
+  --rmd-color-status-standby-solid: var(--rmd-color-palette-slate-600);
+  --rmd-color-status-resolved-fg: var(--rmd-color-palette-green-900);
+  --rmd-color-status-resolved-bg: var(--rmd-color-palette-green-200);
+  --rmd-color-status-resolved-solid: var(--rmd-color-palette-green-500);
+  --rmd-color-status-offline-fg: var(--rmd-color-palette-text-muted);
+  --rmd-color-status-offline-bg: var(--rmd-color-palette-foam-300);
+  --rmd-color-status-offline-solid: var(--rmd-color-palette-line-strong);
+  /* font.family */
+  --rmd-font-family-display: Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --rmd-font-family-body: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+  /* font.weight */
+  --rmd-font-weight-regular: 400;
+  --rmd-font-weight-medium: 500;
+  --rmd-font-weight-semibold: 600;
+  --rmd-font-weight-bold: 700;
+  /* space.xs */
+  --rmd-space-xs: 4px;
+  /* space.sm */
+  --rmd-space-sm: 8px;
+  /* space.md */
+  --rmd-space-md: 12px;
+  /* space.lg */
+  --rmd-space-lg: 16px;
+  /* space.xl */
+  --rmd-space-xl: 24px;
+  /* space.2xl */
+  --rmd-space-2xl: 32px;
+  /* space.3xl */
+  --rmd-space-3xl: 48px;
+  /* space.4xl */
+  --rmd-space-4xl: 64px;
+  /* space.5xl */
+  --rmd-space-5xl: 96px;
+  /* shape.none */
+  --rmd-shape-none: 0px;
+  /* shape.xs */
+  --rmd-shape-xs: 4px;
+  /* shape.sm */
+  --rmd-shape-sm: 8px;
+  /* shape.md */
+  --rmd-shape-md: 12px;
+  /* shape.lg */
+  --rmd-shape-lg: 16px;
+  /* shape.xl */
+  --rmd-shape-xl: 28px;
+  /* shape.full */
+  --rmd-shape-full: 999px;
+  /* size.touchTarget */
+  --rmd-size-touch-target: 48px;
+  /* size.fieldHeight */
+  --rmd-size-field-height: 56px;
+  /* size.buttonHeight */
+  --rmd-size-button-height: 40px;
+  /* size.emergencyButtonHeight */
+  --rmd-size-emergency-button-height: 48px;
+  /* size.rowHeight */
+  --rmd-size-row-height: 48px;
+  /* size.contentMaxWidth */
+  --rmd-size-content-max-width: 1280px;
+  /* elevation.0 */
+  --rmd-elevation-0: none;
+  /* elevation.1 */
+  --rmd-elevation-1: 0px 1px 2px 0px rgba(6,20,32,0.16), 0px 1px 3px 1px rgba(6,20,32,0.08);
+  /* elevation.2 */
+  --rmd-elevation-2: 0px 1px 2px 0px rgba(6,20,32,0.16), 0px 2px 6px 2px rgba(6,20,32,0.08);
+  /* elevation.3 */
+  --rmd-elevation-3: 0px 1px 3px 0px rgba(6,20,32,0.16), 0px 4px 8px 3px rgba(6,20,32,0.10);
+  /* elevation.4 */
+  --rmd-elevation-4: 0px 2px 3px 0px rgba(6,20,32,0.16), 0px 6px 10px 4px rgba(6,20,32,0.10);
+  /* elevation.5 */
+  --rmd-elevation-5: 0px 4px 4px 0px rgba(6,20,32,0.16), 0px 8px 12px 6px rgba(6,20,32,0.10);
+  /* duration.short */
+  --rmd-duration-short: 100ms;
+  /* duration.medium */
+  --rmd-duration-medium: 200ms;
+  /* duration.long */
+  --rmd-duration-long: 350ms;
+  /* duration.extraLong */
+  --rmd-duration-extra-long: 500ms;
+  /* easing.standard */
+  --rmd-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  /* easing.decelerate */
+  --rmd-easing-decelerate: cubic-bezier(0, 0, 0, 1);
+  /* easing.accelerate */
+  --rmd-easing-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  /* breakpoint.compact */
+  --rmd-breakpoint-compact: 0px;
+  /* breakpoint.medium */
+  --rmd-breakpoint-medium: 600px;
+  /* breakpoint.expanded */
+  --rmd-breakpoint-expanded: 840px;
+  /* breakpoint.large */
+  --rmd-breakpoint-large: 1200px;
+  /* breakpoint.extraLarge */
+  --rmd-breakpoint-extra-large: 1600px;
+  /* gutter.compact */
+  --rmd-gutter-compact: 16px;
+  /* gutter.medium */
+  --rmd-gutter-medium: 24px;
+  /* gutter.expanded */
+  --rmd-gutter-expanded: 32px;
+  /* color.scheme */
+  --rmd-color-primary: var(--rmd-color-palette-navy-700);
+  --rmd-color-on-primary: var(--rmd-color-palette-text-on-color);
+  --rmd-color-primary-container: var(--rmd-color-palette-navy-200);
+  --rmd-color-on-primary-container: var(--rmd-color-palette-navy-900);
+  --rmd-color-secondary: var(--rmd-color-palette-slate-600);
+  --rmd-color-on-secondary: var(--rmd-color-palette-text-on-color);
+  --rmd-color-secondary-container: var(--rmd-color-palette-slate-200);
+  --rmd-color-on-secondary-container: var(--rmd-color-palette-slate-900);
+  --rmd-color-tertiary: var(--rmd-color-palette-orange-600);
+  --rmd-color-on-tertiary: var(--rmd-color-palette-text-on-color);
+  --rmd-color-tertiary-container: var(--rmd-color-palette-orange-200);
+  --rmd-color-on-tertiary-container: var(--rmd-color-palette-orange-900);
+  --rmd-color-error: var(--rmd-color-palette-red-500);
+  --rmd-color-on-error: var(--rmd-color-palette-text-on-color);
+  --rmd-color-error-container: var(--rmd-color-palette-red-200);
+  --rmd-color-on-error-container: var(--rmd-color-palette-red-900);
+  --rmd-color-surface: var(--rmd-color-palette-foam-100);
+  --rmd-color-surface-container-lowest: var(--rmd-color-palette-foam-0);
+  --rmd-color-surface-container-low: var(--rmd-color-palette-foam-200);
+  --rmd-color-surface-container: var(--rmd-color-palette-foam-300);
+  --rmd-color-surface-container-high: var(--rmd-color-palette-foam-400);
+  --rmd-color-surface-container-highest: var(--rmd-color-palette-foam-500);
+  --rmd-color-on-surface: var(--rmd-color-palette-text-strong);
+  --rmd-color-on-surface-variant: var(--rmd-color-palette-text-muted);
+  --rmd-color-outline: var(--rmd-color-palette-line-strong);
+  --rmd-color-outline-variant: var(--rmd-color-palette-line-soft);
+  --rmd-color-inverse-surface: #1A2A38;
+  --rmd-color-inverse-on-surface: var(--rmd-color-palette-foam-300);
+  --rmd-color-scrim: rgba(6, 20, 32, 0.48);
+}
+
+:root {
+  /* type roles */
+  --rmd-type-display-large-family: Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-display-large-size: 57px;
+  --rmd-type-display-large-line: 64px;
+  --rmd-type-display-large-weight: 600;
+  --rmd-type-display-large-tracking: -0.02em;
+  --rmd-type-display-small-family: Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-display-small-size: 36px;
+  --rmd-type-display-small-line: 44px;
+  --rmd-type-display-small-weight: 600;
+  --rmd-type-display-small-tracking: -0.01em;
+  --rmd-type-headline-large-family: Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-headline-large-size: 32px;
+  --rmd-type-headline-large-line: 40px;
+  --rmd-type-headline-large-weight: 600;
+  --rmd-type-headline-large-tracking: -0.01em;
+  --rmd-type-headline-medium-family: Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-headline-medium-size: 28px;
+  --rmd-type-headline-medium-line: 36px;
+  --rmd-type-headline-medium-weight: 600;
+  --rmd-type-headline-medium-tracking: 0;
+  --rmd-type-headline-small-family: Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-headline-small-size: 24px;
+  --rmd-type-headline-small-line: 32px;
+  --rmd-type-headline-small-weight: 600;
+  --rmd-type-headline-small-tracking: 0;
+  --rmd-type-title-large-family: Archivo, 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-title-large-size: 22px;
+  --rmd-type-title-large-line: 28px;
+  --rmd-type-title-large-weight: 600;
+  --rmd-type-title-large-tracking: 0;
+  --rmd-type-title-medium-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-title-medium-size: 16px;
+  --rmd-type-title-medium-line: 24px;
+  --rmd-type-title-medium-weight: 600;
+  --rmd-type-title-medium-tracking: 0.01em;
+  --rmd-type-title-small-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-title-small-size: 14px;
+  --rmd-type-title-small-line: 20px;
+  --rmd-type-title-small-weight: 600;
+  --rmd-type-title-small-tracking: 0.01em;
+  --rmd-type-body-large-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-body-large-size: 16px;
+  --rmd-type-body-large-line: 26px;
+  --rmd-type-body-large-weight: 400;
+  --rmd-type-body-large-tracking: 0;
+  --rmd-type-body-medium-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-body-medium-size: 14px;
+  --rmd-type-body-medium-line: 22px;
+  --rmd-type-body-medium-weight: 400;
+  --rmd-type-body-medium-tracking: 0;
+  --rmd-type-body-small-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-body-small-size: 12px;
+  --rmd-type-body-small-line: 18px;
+  --rmd-type-body-small-weight: 400;
+  --rmd-type-body-small-tracking: 0;
+  --rmd-type-label-large-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-label-large-size: 14px;
+  --rmd-type-label-large-line: 20px;
+  --rmd-type-label-large-weight: 600;
+  --rmd-type-label-large-tracking: 0.02em;
+  --rmd-type-label-medium-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-label-medium-size: 12px;
+  --rmd-type-label-medium-line: 16px;
+  --rmd-type-label-medium-weight: 600;
+  --rmd-type-label-medium-tracking: 0.04em;
+  --rmd-type-label-small-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --rmd-type-label-small-size: 11px;
+  --rmd-type-label-small-line: 16px;
+  --rmd-type-label-small-weight: 600;
+  --rmd-type-label-small-tracking: 0.08em;
+  --rmd-type-code-family: 'JetBrains Mono', ui-monospace, monospace;
+  --rmd-type-code-size: 13px;
+  --rmd-type-code-line: 20px;
+  --rmd-type-code-weight: 400;
+  --rmd-type-code-tracking: 0;
+}
+
+[data-scheme="dark"] {
+  /* color.scheme */
+  --rmd-color-primary: var(--rmd-color-palette-reversed-primary);
+  --rmd-color-on-primary: var(--rmd-color-palette-reversed-on-primary);
+  --rmd-color-primary-container: var(--rmd-color-palette-navy-600);
+  --rmd-color-on-primary-container: var(--rmd-color-palette-navy-200);
+  --rmd-color-secondary: var(--rmd-color-palette-reversed-secondary);
+  --rmd-color-on-secondary: var(--rmd-color-palette-reversed-on-secondary);
+  --rmd-color-secondary-container: var(--rmd-color-palette-slate-700);
+  --rmd-color-on-secondary-container: var(--rmd-color-palette-slate-200);
+  --rmd-color-tertiary: var(--rmd-color-palette-reversed-tertiary);
+  --rmd-color-on-tertiary: var(--rmd-color-palette-orange-900);
+  --rmd-color-tertiary-container: var(--rmd-color-palette-orange-800);
+  --rmd-color-on-tertiary-container: var(--rmd-color-palette-orange-200);
+  --rmd-color-error: var(--rmd-color-palette-reversed-error);
+  --rmd-color-on-error: var(--rmd-color-palette-red-700);
+  --rmd-color-error-container: var(--rmd-color-palette-red-600);
+  --rmd-color-on-error-container: var(--rmd-color-palette-red-200);
+  --rmd-color-surface: var(--rmd-color-palette-ink-800);
+  --rmd-color-surface-container-lowest: var(--rmd-color-palette-ink-900);
+  --rmd-color-surface-container-low: var(--rmd-color-palette-ink-700);
+  --rmd-color-surface-container: var(--rmd-color-palette-ink-600);
+  --rmd-color-surface-container-high: var(--rmd-color-palette-ink-500);
+  --rmd-color-surface-container-highest: var(--rmd-color-palette-ink-400);
+  --rmd-color-on-surface: var(--rmd-color-palette-text-on-dark);
+  --rmd-color-on-surface-variant: var(--rmd-color-palette-text-on-dark-muted);
+  --rmd-color-outline: var(--rmd-color-palette-slate-500);
+  --rmd-color-outline-variant: var(--rmd-color-palette-line-on-dark);
+  --rmd-color-inverse-surface: var(--rmd-color-palette-text-on-dark);
+  --rmd-color-inverse-on-surface: var(--rmd-color-palette-ink-600);
+  --rmd-color-scrim: rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-scheme="light"]) {
+    --rmd-color-primary: var(--rmd-color-palette-reversed-primary);
+    --rmd-color-on-primary: var(--rmd-color-palette-reversed-on-primary);
+    --rmd-color-primary-container: var(--rmd-color-palette-navy-600);
+    --rmd-color-on-primary-container: var(--rmd-color-palette-navy-200);
+    --rmd-color-secondary: var(--rmd-color-palette-reversed-secondary);
+    --rmd-color-on-secondary: var(--rmd-color-palette-reversed-on-secondary);
+    --rmd-color-secondary-container: var(--rmd-color-palette-slate-700);
+    --rmd-color-on-secondary-container: var(--rmd-color-palette-slate-200);
+    --rmd-color-tertiary: var(--rmd-color-palette-reversed-tertiary);
+    --rmd-color-on-tertiary: var(--rmd-color-palette-orange-900);
+    --rmd-color-tertiary-container: var(--rmd-color-palette-orange-800);
+    --rmd-color-on-tertiary-container: var(--rmd-color-palette-orange-200);
+    --rmd-color-error: var(--rmd-color-palette-reversed-error);
+    --rmd-color-on-error: var(--rmd-color-palette-red-700);
+    --rmd-color-error-container: var(--rmd-color-palette-red-600);
+    --rmd-color-on-error-container: var(--rmd-color-palette-red-200);
+    --rmd-color-surface: var(--rmd-color-palette-ink-800);
+    --rmd-color-surface-container-lowest: var(--rmd-color-palette-ink-900);
+    --rmd-color-surface-container-low: var(--rmd-color-palette-ink-700);
+    --rmd-color-surface-container: var(--rmd-color-palette-ink-600);
+    --rmd-color-surface-container-high: var(--rmd-color-palette-ink-500);
+    --rmd-color-surface-container-highest: var(--rmd-color-palette-ink-400);
+    --rmd-color-on-surface: var(--rmd-color-palette-text-on-dark);
+    --rmd-color-on-surface-variant: var(--rmd-color-palette-text-on-dark-muted);
+    --rmd-color-outline: var(--rmd-color-palette-slate-500);
+    --rmd-color-outline-variant: var(--rmd-color-palette-line-on-dark);
+    --rmd-color-inverse-surface: var(--rmd-color-palette-text-on-dark);
+    --rmd-color-inverse-on-surface: var(--rmd-color-palette-ink-600);
+    --rmd-color-scrim: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Material Web bridge — @material/web reads these names. */
+:root {
+  --md-sys-color-primary: var(--rmd-color-primary);
+  --md-sys-color-on-primary: var(--rmd-color-on-primary);
+  --md-sys-color-primary-container: var(--rmd-color-primary-container);
+  --md-sys-color-on-primary-container: var(--rmd-color-on-primary-container);
+  --md-sys-color-secondary: var(--rmd-color-secondary);
+  --md-sys-color-on-secondary: var(--rmd-color-on-secondary);
+  --md-sys-color-secondary-container: var(--rmd-color-secondary-container);
+  --md-sys-color-on-secondary-container: var(--rmd-color-on-secondary-container);
+  --md-sys-color-tertiary: var(--rmd-color-tertiary);
+  --md-sys-color-on-tertiary: var(--rmd-color-on-tertiary);
+  --md-sys-color-tertiary-container: var(--rmd-color-tertiary-container);
+  --md-sys-color-on-tertiary-container: var(--rmd-color-on-tertiary-container);
+  --md-sys-color-error: var(--rmd-color-error);
+  --md-sys-color-on-error: var(--rmd-color-on-error);
+  --md-sys-color-error-container: var(--rmd-color-error-container);
+  --md-sys-color-on-error-container: var(--rmd-color-on-error-container);
+  --md-sys-color-surface: var(--rmd-color-surface);
+  --md-sys-color-surface-container-lowest: var(--rmd-color-surface-container-lowest);
+  --md-sys-color-surface-container-low: var(--rmd-color-surface-container-low);
+  --md-sys-color-surface-container: var(--rmd-color-surface-container);
+  --md-sys-color-surface-container-high: var(--rmd-color-surface-container-high);
+  --md-sys-color-surface-container-highest: var(--rmd-color-surface-container-highest);
+  --md-sys-color-on-surface: var(--rmd-color-on-surface);
+  --md-sys-color-on-surface-variant: var(--rmd-color-on-surface-variant);
+  --md-sys-color-outline: var(--rmd-color-outline);
+  --md-sys-color-outline-variant: var(--rmd-color-outline-variant);
+  --md-sys-color-inverse-surface: var(--rmd-color-inverse-surface);
+  --md-sys-color-inverse-on-surface: var(--rmd-color-inverse-on-surface);
+  --md-sys-color-scrim: var(--rmd-color-scrim);
+  --md-sys-shape-corner-none: var(--rmd-shape-none);
+  --md-sys-shape-corner-extra-small: var(--rmd-shape-xs);
+  --md-sys-shape-corner-small: var(--rmd-shape-sm);
+  --md-sys-shape-corner-medium: var(--rmd-shape-md);
+  --md-sys-shape-corner-large: var(--rmd-shape-lg);
+  --md-sys-shape-corner-extra-large: var(--rmd-shape-xl);
+  --md-sys-shape-corner-full: var(--rmd-shape-full);
+  --md-ref-typeface-brand: var(--rmd-font-family-display);
+  --md-ref-typeface-plain: var(--rmd-font-family-body);
+}
