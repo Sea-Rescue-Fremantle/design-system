@@ -32,13 +32,16 @@
       "default": "./dist/layouts/index.js"
     },
     "./tokens.css": "./build/tokens.css",
-    "./tokens.dtcg.json": "./tokens.dtcg.json"
+    "./tokens.dtcg.json": "./tokens.dtcg.json",
+    "./manifest.webmanifest": "./assets/pwa/manifest.webmanifest",
+    "./assets/*": "./assets/*"
   },
-  "files": ["dist", "build", "tokens.dtcg.json", "AGENTS.md", "README.md"],
+  "files": ["dist", "build", "assets/pwa", "assets/brand", "tokens.dtcg.json", "AGENTS.md", "README.md"],
   "publishConfig": {
     "access": "public",
     "provenance": true
   },
+  "packageManager": "npm@10.9.2",
   "scripts": {
     "tokens": "node scripts/build-tokens.mjs",
     "tokens:check": "npm run tokens && git diff --exit-code build/",
@@ -50,19 +53,27 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@mui/icons-material": "^6 || ^7",
-    "@mui/material": "^6 || ^7",
-    "react": "^18 || ^19"
+    "@mui/icons-material": "^7.1.0",
+    "@mui/material": "^7.1.0",
+    "react": "^18.3.1 || ^19.1.0",
+    "react-dom": "^18.3.1 || ^19.1.0"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": { "optional": false }
   },
   "devDependencies": {
-    "@eslint/js": "^9",
-    "@types/react": "^19",
-    "eslint": "^9",
-    "eslint-plugin-react": "^7",
-    "stylelint": "^16",
-    "stylelint-config-standard": "^36",
-    "typescript": "^5",
-    "typescript-eslint": "^8"
+    "@eslint/js": "9.28.0",
+    "@mui/icons-material": "7.1.1",
+    "@mui/material": "7.1.1",
+    "@types/react": "19.1.8",
+    "eslint": "9.28.0",
+    "eslint-plugin-react": "7.37.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "stylelint": "16.20.0",
+    "stylelint-config-standard": "36.0.1",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.34.0"
   },
-  "engines": { "node": ">=20" }
+  "engines": { "node": ">=20.11 <23", "npm": ">=10.5" }
 }

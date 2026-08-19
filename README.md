@@ -71,10 +71,23 @@ build/                    GENERATED. Committed so consumers need no build step.
   tokens.ts               Typed tokens, StatusName union, STATUS_ORDER
 src/
   theme.ts                MUI lightTheme / darkTheme, statusColors()
-  components/             Components the system guarantees
+  components/             StatusChip, Field, TouchTarget
   layouts/                The seven page layouts + useWindowSizeClass()
+assets/pwa/               Manifest, app icons and the <head> block for installs
 docs/index.html           The documentation page (GitHub Pages)
 AGENTS.md                 Build rules — read by humans and coding agents
+```
+
+### Installable applications
+
+Field surfaces are installed, not bookmarked. Copy the head block and serve the
+assets — don't generate your own icons:
+
+```html
+<!-- assets/pwa/head.html, verbatim -->
+<link rel="manifest" href="/assets/pwa/manifest.webmanifest">
+<meta name="theme-color" content="#06233E">
+<link rel="apple-touch-icon" href="/assets/pwa/apple-touch-icon-180.png" sizes="180x180">
 ```
 
 ## Contributing
@@ -87,6 +100,10 @@ a token, add it to `tokens.dtcg.json` — don't inline it.
 npm run tokens     # regenerate build/ from tokens.dtcg.json
 npm run verify     # what CI runs: token freshness + eslint + stylelint
 ```
+
+Versions are pinned: one MUI major (`^7.1.0` peer), exact devDependencies, Node
+`>=20.11 <23` (`.nvmrc`), `packageManager: npm@10.9.2`. CI runs `npm ci`, so
+`package-lock.json` is committed and every lockfile change is reviewable.
 
 `build/` is generated and committed. Never edit it by hand — CI fails if
 `npm run tokens` produces a diff.

@@ -11,11 +11,6 @@ import react from 'eslint-plugin-react';
 const COLOR_LITERAL = String.raw`^(#[0-9a-fA-F]{3,8}|(rgb|rgba|hsl|hsla|oklch)\(.*|white|black|red|green|blue|orange|navy|grey|gray)$`;
 
 export default tseslint.config(
-  // Global ignores. Must be its own config object with no `files` key —
-  // an `ignores` inside a config object only applies to that object, so
-  // generated output would otherwise still be linted by the recommended sets.
-  { ignores: ['build/**', 'dist/**', 'node_modules/**', 'docs/**'] },
-
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -29,7 +24,7 @@ export default tseslint.config(
 
         // ---- colour ----------------------------------------------------
         {
-          selector: `Literal[value=/${COLOR_LITERAL}/]`,
+          selector: `Literal[value=/${COLOR_LITERAL.slice(1, -1)}/]`,
           message:
             'Colour literal. Import from build/tokens.ts (tokens.color.scheme.light.primary) or use var(--rmd-color-*).',
         },
@@ -45,6 +40,30 @@ export default tseslint.config(
           selector: 'JSXOpeningElement[name.name=/Chip$/] JSXAttribute[name.name="color"]',
           message:
             'Do not colour a chip directly. Use <StatusChip status="…"> so colour, icon and label stay in step.',
+        },
+
+        // ---- fields -----------------------------------------------------
+        {
+          selector:
+            'JSXOpeningElement[name.name="TextField"] JSXAttribute[name.name="variant"][value.value=/^(filled|standard)$/]',
+          message: 'Fields are outlined. Filled and standard variants are not used in this system.',
+        },
+        {
+          selector: 'JSXOpeningElement[name.name="TextField"] JSXAttribute[name.name="hiddenLabel"]',
+          message:
+            'The label is always visible. A placeholder is an example, never a label — use <Field label="…">.',
+        },
+
+        // ---- touch targets ---------------------------------------------
+        {
+          selector:
+            'JSXOpeningElement[name.name=/^(Button|IconButton|Fab|Chip|Checkbox|Radio|Switch|ToggleButton|Tab)$/] JSXAttribute[name.name="size"][value.value="small"]',
+          message:
+            'size="small" breaks the 48px target floor. Keep the default size, or wrap the control in <TouchTarget> if its ink must stay small.',
+        },
+        {
+          selector: 'JSXOpeningElement[name.name="IconButton"] JSXAttribute[name.name="edge"]',
+          message: 'Do not shave an icon button\u2019s hit box. Use sx={iconButtonSx()} — 48px around a 24px glyph.',
         },
 
         // ---- one filled primary per view -------------------------------
@@ -93,20 +112,9 @@ export default tseslint.config(
     },
   },
 
-  // The token build and the docs page are allowed literals. The token build
-  // is also a Node script, so it gets Node globals.
+  // The token build and the docs page are allowed literals.
   {
     files: ['scripts/**', '**/*.stories.tsx', '**/email/**'],
-    languageOptions: {
-      globals: { console: 'readonly', process: 'readonly', URL: 'readonly', fetch: 'readonly' },
-    },
-    rules: { 'no-restricted-syntax': 'off' },
-  },
-
-  // src/theme.ts is the one place the theme is allowed to be created — that is
-  // the whole point of the rule that bans createTheme everywhere else.
-  {
-    files: ['src/theme.ts'],
     rules: { 'no-restricted-syntax': 'off' },
   },
 );

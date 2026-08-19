@@ -65,6 +65,7 @@
         <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7BA1C6; padding: 0 10px 6px;">Components</div>
         <a href="#buttons" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Buttons</a>
         <a href="#fields" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Fields &amp; selection</a>
+        <a href="#targets" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Touch targets</a>
         <a href="#status" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Chips &amp; status</a>
         <a href="#cards" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Cards</a>
         <a href="#nav" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Navigation</a>
@@ -81,6 +82,7 @@
       <div style="display: flex; flex-direction: column; gap: 2px;">
         <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7BA1C6; padding: 0 10px 6px;">Build</div>
         <a href="#tokens" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Tokens &amp; theming</a>
+        <a href="#install" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">App icons &amp; install</a>
         <a href="#rules" style="color: #DDE5EB; padding: 7px 10px; border-radius: 8px;" style-hover="background: #0F3B63; color: #FFFFFF;">Rules for agents</a>
       </div>
     </nav>
@@ -505,16 +507,80 @@
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <div style="font-size: 13px; font-weight: 600; color: #16283A;">Response priority</div>
             <div style="display: inline-flex; border: 1px solid #7A8B9B; border-radius: 999px; overflow: hidden; align-self: flex-start;">
-              <button type="button" style="height: 44px; padding: 0 20px; border: none; background: #CFE1F2; color: #06233E; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;"><span class="msr" style="font-size: 17px;">check</span>Routine</button>
-              <button type="button" style="height: 44px; padding: 0 20px; border: none; border-left: 1px solid #7A8B9B; background: transparent; color: #0F3B63; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #E7EFF7;">Urgent</button>
-              <button type="button" style="height: 44px; padding: 0 20px; border: none; border-left: 1px solid #7A8B9B; background: transparent; color: #0F3B63; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #E7EFF7;">Distress</button>
+              <button type="button" style="height: 48px; padding: 0 20px; border: none; background: #CFE1F2; color: #06233E; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;"><span class="msr" style="font-size: 17px;">check</span>Routine</button>
+              <button type="button" style="height: 48px; padding: 0 20px; border: none; border-left: 1px solid #7A8B9B; background: transparent; color: #0F3B63; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #E7EFF7;">Urgent</button>
+              <button type="button" style="height: 48px; padding: 0 20px; border: none; border-left: 1px solid #7A8B9B; background: transparent; color: #0F3B63; font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: #E7EFF7;">Distress</button>
             </div>
           </div>
           <div style="display: flex; flex-direction: column; gap: 6px;">
             <div style="font-size: 13px; font-weight: 600; color: #16283A;">Confirmations</div>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; min-height: 44px; cursor: pointer;"><span style="width: 20px; height: 20px; border-radius: 4px; background: #0F3B63; display: grid; place-items: center; color: #FFFFFF; flex-shrink: 0;"><span class="msr" style="font-size: 16px;">check</span></span>Lifejackets confirmed on board</label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; min-height: 44px; cursor: pointer;"><span style="width: 20px; height: 20px; border-radius: 4px; border: 2px solid #7A8B9B; flex-shrink: 0;"></span>EPIRB registered</label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; min-height: 44px; cursor: pointer;"><span style="width: 44px; height: 26px; border-radius: 999px; background: #0F3B63; display: flex; align-items: center; justify-content: flex-end; padding: 3px; flex-shrink: 0;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #FFFFFF;"></span></span>Share position with VMR</label>
+            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; min-height: 48px; cursor: pointer;"><span style="width: 20px; height: 20px; border-radius: 4px; background: #0F3B63; display: grid; place-items: center; color: #FFFFFF; flex-shrink: 0;"><span class="msr" style="font-size: 16px;">check</span></span>Lifejackets confirmed on board</label>
+            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; min-height: 48px; cursor: pointer;"><span style="width: 20px; height: 20px; border-radius: 4px; border: 2px solid #7A8B9B; flex-shrink: 0;"></span>EPIRB registered</label>
+            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; min-height: 48px; cursor: pointer;"><span style="width: 44px; height: 26px; border-radius: 999px; background: #0F3B63; display: flex; align-items: center; justify-content: flex-end; padding: 3px; flex-shrink: 0;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #FFFFFF;"></span></span>Share position with VMR</label>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+          <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">The field contract</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 22px;">
+              <div style="display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px;"><span style="font-weight: 600; color: #16283A;">Variant</span><span style="color: #47586A;">Outlined. Filled and standard are never used.</span></div>
+              <div style="display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px;"><span style="font-weight: 600; color: #16283A;">Height</span><span style="color: #47586A;">56px; multiline grows from <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">rows</code>.</span></div>
+              <div style="display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px;"><span style="font-weight: 600; color: #16283A;">Label</span><span style="color: #47586A;">Always visible, sentence case. A placeholder is an example, never a label.</span></div>
+              <div style="display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px;"><span style="font-weight: 600; color: #16283A;">Helper text</span><span style="color: #47586A;">Space always reserved, 14px &mdash; an error never shifts the fields below it.</span></div>
+              <div style="display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px;"><span style="font-weight: 600; color: #16283A;">Required</span><span style="color: #47586A;">The default. Mark the exceptions with <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">optional</code>.</span></div>
+              <div style="display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px;"><span style="font-weight: 600; color: #16283A;">Errors</span><span style="color: #47586A;">Helper text says what to do, announced politely. Never colour alone.</span></div>
+              <div style="display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 12px;"><span style="font-weight: 600; color: #16283A;">Layout</span><span style="color: #47586A;">One field per line. Two inputs on one line is how a latitude ends up in a longitude.</span></div>
+            </div>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">Kinds &mdash; pick one, never hand-set the keyboard</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 22px;">
+              <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 12px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">text multiline search</code><span style="color: #47586A;">Text keyboard, body font</span></div>
+              <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 12px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">number time position phone</code><span style="color: #47586A;">Numeric keypad, mono, tabular numerals</span></div>
+              <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 12px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">callsign</code><span style="color: #47586A;">Uppercased, mono</span></div>
+              <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 12px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">date</code><span style="color: #47586A;">Native date picker, mono</span></div>
+              <div style="display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 12px;"><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">email</code><span style="color: #47586A;">Email keyboard and autocomplete</span></div>
+            </div>
+            <pre style="margin: 0; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 22px; color: #101C27; background: #F4F7FA; border: 1px solid #DDE5EB; border-radius: 12px; padding: 14px;">&lt;Field label="Position" kind="position"
+       helperText="Decimal degrees" /&gt;</pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="targets" style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #D2500F;">Components</div>
+          <h2 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 34px; line-height: 42px; font-weight: 600; letter-spacing: -0.015em;">Touch targets</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 26px; color: #47586A; max-width: 700px; text-wrap: pretty;">The floor is the hit area, not the ink. 48px in both axes, 8px of clear space between neighbours &mdash; a wet thumb landing between two rows should hit neither, not the wrong one. <code style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">size=&quot;small&quot;</code> fails the lint rules.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+          <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 16px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">Icon button &mdash; 24px glyph, 48px box</div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="width: 48px; height: 48px; border-radius: 999px; display: grid; place-items: center; background: #E7EFF7; outline: 1px dashed #7BA1C6; outline-offset: -1px;"><span class="msr" style="font-size: 24px; color: #0F3B63;">close</span></span>
+              <span style="width: 48px; height: 48px; border-radius: 999px; display: grid; place-items: center; background: #E7EFF7; outline: 1px dashed #7BA1C6; outline-offset: -1px;"><span class="msr" style="font-size: 24px; color: #0F3B63;">more_vert</span></span>
+              <span style="font-size: 13px; color: #47586A; line-height: 20px;">The dashed edge is the target, the glyph is the ink.</span>
+            </div>
+            <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">sx={iconButtonSx()}</code>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 16px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">Small ink, full target</div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="height: 48px; display: inline-flex; align-items: center; outline: 1px dashed #7BA1C6; border-radius: 999px; padding: 0 2px;"><span style="height: 32px; padding: 0 14px; border-radius: 999px; background: #CFE1F2; color: #06233E; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center;">Rottnest</span></span>
+              <span style="height: 48px; display: inline-flex; align-items: center; outline: 1px dashed #7BA1C6; border-radius: 999px; padding: 0 2px;"><span style="height: 32px; padding: 0 14px; border-radius: 999px; border: 1px solid #7A8B9B; color: #0F3B63; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center;">Fremantle</span></span>
+            </div>
+            <p style="margin: 0; font-size: 13px; line-height: 20px; color: #47586A;">Dense tables, map pins and chip scrollers keep their visual size and gain hit slop: <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">&lt;TouchTarget mode=&quot;slop&quot;&gt;</code>.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">Floors</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 22px;">
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 12px;"><span style="color: #47586A;">Any tappable control</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-align: right; color: #16283A;">48px</span></div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 12px;"><span style="color: #47586A;">Icon button box</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-align: right; color: #16283A;">48px</span></div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 12px;"><span style="color: #47586A;">Between neighbours</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-align: right; color: #16283A;">8px</span></div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 12px;"><span style="color: #47586A;">Table row</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-align: right; color: #16283A;">48px</span></div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 12px;"><span style="color: #47586A;">Field</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-align: right; color: #16283A;">56px</span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -1106,6 +1172,52 @@
           <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 6px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">tokens.dtcg.json</div><div style="font-size: 13px; line-height: 21px; color: #47586A;">Single source of truth: both schemes, the ramps, the status set, type scale, spacing, shape, elevation, motion, layout.</div></div>
           <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 6px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">AGENTS.md</div><div style="font-size: 13px; line-height: 21px; color: #47586A;">Rules an agent can follow without reading this page: token mappings, component decision table, status vocabulary, ship checklist.</div></div>
           <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 6px;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #0F3B63;">this page</div><div style="font-size: 13px; line-height: 21px; color: #47586A;">The visual reference. When code and this page disagree, tokens.dtcg.json wins &mdash; then fix whichever drifted.</div></div>
+        </div>
+      </section>
+
+      <section id="install" style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #D2500F;">Build</div>
+          <h2 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 34px; line-height: 42px; font-weight: 600; letter-spacing: -0.015em;">App icons &amp; install</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 26px; color: #47586A; max-width: 700px; text-wrap: pretty;">Field surfaces are installed to a home screen, not bookmarked. The manifest, the icon set and the exact <code style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">&lt;head&gt;</code> block ship in <code style="font-family: 'JetBrains Mono', monospace; font-size: 14px;">assets/pwa/</code> &mdash; applications copy them rather than generating their own.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+          <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 16px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">The icon set</div>
+            <div style="display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap;">
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                <img src="assets/pwa/icon-512.png" alt="App icon, 512px" style="width: 72px; height: 72px; border-radius: 16px; display: block;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #47586A;">512 any</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                <img src="assets/pwa/icon-maskable-512.png" alt="Maskable app icon" style="width: 56px; height: 56px; border-radius: 999px; display: block;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #47586A;">512 maskable</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                <img src="assets/pwa/apple-touch-icon-180.png" alt="Apple touch icon" style="width: 44px; height: 44px; border-radius: 10px; display: block;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #47586A;">180 iOS</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                <img src="assets/pwa/favicon-32.png" alt="Favicon" style="width: 32px; height: 32px; border-radius: 6px; display: block;">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #47586A;">32 tab</span>
+              </div>
+            </div>
+            <p style="margin: 0; font-size: 13px; line-height: 20px; color: #47586A;">The maskable icon keeps the mark inside the 80% safe zone, so Android&rsquo;s circle, squircle and teardrop masks all clear it. Regenerate from <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">assets/mark-white.svg</code>; never redraw.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #C8D3DD; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #47586A;">Head block</div>
+            <pre style="margin: 0; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 20px; color: #101C27; background: #F4F7FA; border: 1px solid #DDE5EB; border-radius: 12px; padding: 14px;">&lt;link rel="manifest" href="/assets/pwa/manifest.webmanifest"&gt;
+&lt;meta name="theme-color" content="#06233E"&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180"
+      href="/assets/pwa/apple-touch-icon-180.png"&gt;
+&lt;meta name="viewport" content="width=device-width,
+      initial-scale=1, viewport-fit=cover"&gt;</pre>
+            <ul style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 24px; color: #47586A;">
+              <li><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">theme-color</code> is navy in both schemes &mdash; the status bar belongs to the brand, not the scheme.</li>
+              <li><code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">viewport-fit=cover</code> plus <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">env(safe-area-inset-*)</code> padding, so the bottom bar clears the home indicator.</li>
+              <li>Offline is a state, not an error page: show <code style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">StatusChip status=&quot;offline&quot;</code>.</li>
+            </ul>
+          </div>
         </div>
       </section>
 

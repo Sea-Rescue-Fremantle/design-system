@@ -334,7 +334,10 @@ export const tokens = {
   },
   "size": {
     "touchTarget": "48px",
+    "touchTargetGap": "8px",
+    "iconButtonBox": "48px",
     "fieldHeight": "56px",
+    "helperTextHeight": "22px",
     "buttonHeight": "40px",
     "emergencyButtonHeight": "48px",
     "rowHeight": "48px",

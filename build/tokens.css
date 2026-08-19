@@ -131,8 +131,14 @@
   --rmd-shape-full: 999px;
   /* size.touchTarget */
   --rmd-size-touch-target: 48px;
+  /* size.touchTargetGap */
+  --rmd-size-touch-target-gap: 8px;
+  /* size.iconButtonBox */
+  --rmd-size-icon-button-box: 48px;
   /* size.fieldHeight */
   --rmd-size-field-height: 56px;
+  /* size.helperTextHeight */
+  --rmd-size-helper-text-height: 22px;
   /* size.buttonHeight */
   --rmd-size-button-height: 40px;
   /* size.emergencyButtonHeight */

@@ -14,7 +14,9 @@ Read this file before writing any UI. It is the contract; the docs page
 | `build/tokens.css` | CSS custom properties, both schemes, Material Web bridge | **No — generated** |
 | `build/tokens.ts` | Typed token object, `StatusName`, `STATUS_ORDER` | **No — generated** |
 | `src/theme.ts` | MUI `lightTheme` / `darkTheme`, `statusColors()` | Yes |
+| `src/components/` | `StatusChip`, `Field`, `TouchTarget` — the guaranteed components | Yes |
 | `src/layouts/` | The seven page layouts + `useWindowSizeClass` | Yes |
+| `assets/pwa/` | Manifest, icons and the `<head>` block for installable apps | Yes — regenerate icons from `assets/mark-white.svg`, don’t hand-draw |
 | `scripts/build-tokens.mjs` | The generator | Yes |
 
 After editing `tokens.dtcg.json`, run `npm run tokens`. Never hand-edit `build/`.
@@ -60,9 +62,11 @@ Dark scheme: `<html data-scheme="dark">`, or leave it off and
    tables and map pins.
 5. **Sizes are floors, not suggestions.** Interactive targets ≥ 48px
    (`tokens.size.touchTarget`), inputs ≥ 56px, table rows 48px. Body text ≥ 14px
-   in applications, ≥ 16px on the public site.
+   in applications, ≥ 16px on the public site. The floor is the hit area, not
+   the ink — see “Touch targets” below.
 6. **Fields are outlined.** Filled text fields are not used. Label always
-   visible; reserve helper-text space so layout doesn't jump on error.
+   visible; reserve helper-text space so layout doesn’t jump on error. Render
+   with `<Field>` — see “Fields” below.
 7. **Icons: Material Symbols Rounded only** (`@mui/icons-material`). No second
    icon set, no hand-drawn SVG icons. 20px dense, 24px standard, 40px feature.
 8. **Layout follows the window size class.** Compact → single column +
@@ -121,10 +125,97 @@ Rules that hold across all of them:
    `tokens.layout.readingMaxWidth`, forms at `formMaxWidth`. Full-width
    paragraphs are unreadable on a 27-inch operations screen.
 
+## Fields
+
+Every text input is `<Field>` (`src/components/Field.tsx`). A bare MUI
+`TextField` allows a dozen combinations this system does not, so the wrapper
+closes them off and the lint rules back it up.
+
+| Contract | Value |
+| --- | --- |
+| Variant | Outlined. Filled and standard are never used |
+| Height | `tokens.size.fieldHeight` (56px); multiline grows from `rows` |
+| Label | Always visible, sentence case. A placeholder is an example, never a label |
+| Helper text | Space always reserved (`tokens.size.helperTextHeight`), 14px, so an error never shifts the fields below it |
+| Required | The default. Mark the exceptions with `optional` — most fields in an incident report are required |
+| Errors | `error` + helper text saying what to do, announced politely. Never colour alone |
+| Layout | One field per line, in a `<FieldGroup>`. Two inputs on one line is how a latitude ends up in a longitude |
+
+`kind` fixes keyboard, autocomplete, casing and alignment — pick the kind, never
+hand-set `inputMode`:
+
+| kind | Keyboard | Renders |
+| --- | --- | --- |
+| `text`, `multiline`, `search` | Text | Body font |
+| `number`, `time`, `position`, `phone` | Numeric / decimal / tel | Mono, tabular numerals |
+| `callsign` | Text, uppercased | Mono |
+| `date` | Native date | Mono |
+| `email` | Email | Body font |
+
+## Touch targets
+
+The floor is the **hit area**, not the ink.
+
+| Contract | Value |
+| --- | --- |
+| Any tappable control | ≥ `tokens.size.touchTarget` (48px) in both axes |
+| Icon button | `tokens.size.iconButtonBox` (48px) around a 24px glyph — `sx={iconButtonSx()}` |
+| Between adjacent targets | ≥ `tokens.size.touchTargetGap` (8px) clear — `targetRowSx` |
+| Table rows | `tokens.size.rowHeight` (48px), the whole row is the target |
+| Emergency actions | 48px tall minimum, and the widest target on the screen |
+
+`size="small"` is banned by ESLint on buttons, icon buttons, chips, checkboxes,
+radios, switches, toggles and tabs. Where a control’s ink must stay small — dense
+tables, map pins, chip scrollers — wrap it: `<TouchTarget mode="slop">` keeps the
+visual size and extends the hit area outwards. A screen that needs smaller
+controls needs fewer controls.
+
+## Installable applications
+
+Field surfaces are installed to a home screen, not bookmarked. Every application
+ships the manifest and icons from `assets/pwa/` — do not generate your own.
+
+| File | Use |
+| --- | --- |
+| `assets/pwa/manifest.webmanifest` | Name, scope, `display: standalone`, navy background and theme colour |
+| `icon-192.png`, `icon-512.png` | `purpose: any` |
+| `icon-maskable-512.png` | `purpose: maskable` — mark inside the 80% safe zone |
+| `apple-touch-icon-180.png` | iOS home screen |
+| `favicon-32.png`, `favicon-16.png` | Browser tab |
+| `assets/pwa/head.html` | The exact `<head>` block to copy — manifest, theme-colour, icons, `viewport-fit=cover` |
+
+Rules: `theme-color` is navy in both schemes — the status bar belongs to the
+brand, not the scheme. Respect the safe area (`viewport-fit=cover` plus
+`env(safe-area-inset-*)` padding) so the bottom navigation bar clears the home
+indicator on a vessel handheld. Offline is a state like any other: an installed
+app that loses signal shows the offline state (`StatusChip status="offline"`),
+never a browser error page.
+
+## Versions
+
+Versions are pinned, not ranged. The system supports **one** MUI major at a
+time; a second copy of `@mui/material` in a consuming app means two themes and
+two sets of tokens.
+
+| | Pin |
+| --- | --- |
+| `@mui/material`, `@mui/icons-material` | `^7.1.0` (peer) |
+| `react`, `react-dom` | `^18.3.1 \|\| ^19.1.0` (peer) |
+| Node | `>=20.11 <23`, `.nvmrc` 20.11.1 |
+| npm | `>=10.5`, `packageManager: npm@10.9.2` |
+| devDependencies | Exact versions, no carets |
+
+`package-lock.json` is committed and CI runs `npm ci` — a lockfile change is a
+reviewable event. Upgrading MUI is a deliberate task: bump the peer range, run
+`npm run verify`, and check the field, chip and navigation components against
+the docs page before merging.
+
 ## Component selection
 
 | Need | Use |
 | --- | --- |
+| Any text input | `<Field>` — never a bare `TextField` |
+| A control whose ink must stay small | `<TouchTarget mode="slop">` |
 | Highest-priority action | Filled button — one per view |
 | Secondary / low-priority | Outlined / text button |
 | Emergency, distress | Filled `warning`, `size="large"`, with icon |
