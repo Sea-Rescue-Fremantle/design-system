@@ -25,8 +25,8 @@ Pin a release by appending a tag, which is what applications should do:
 npm install github:Sea-Rescue-Fremantle/design-system#v1.0.0
 ```
 
-The repository is private, so the installing machine needs read access to it —
-an SSH key for a developer, or a fine-grained read-only PAT for a build server.
+The repository is public, so this needs no credentials — it works on a
+developer laptop and a CI runner alike.
 
 ## Use
 
