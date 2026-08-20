@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#0F3B63">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0F3B63"></rect>
+    <rect x="120" y="120" width="260" height="560" rx="16" fill="#0A2C4B"></rect>
+    <rect x="440" y="180" width="560" height="60" rx="12" fill="#FFFFFF"></rect>
+    <rect x="440" y="270" width="360" height="90" rx="16" fill="#1E7A46"></rect>
+  </svg>
+</template>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #FBFCFD; color: #101C27; font-family: "Source Sans 3", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  button { font-family: inherit; cursor: pointer; }
+  input { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0F3B63; outline-offset: 2px; border-radius: 4px; }
+  .msr { font-family: "Material Symbols Rounded"; font-weight: 400; font-style: normal; line-height: 1; letter-spacing: normal; display: inline-block; white-space: nowrap; -webkit-font-smoothing: antialiased; }
+  .field::placeholder { color: #6D8298; }
+</style>
+</helmet>
+
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); min-height: 100vh; background: #FBFCFD;">
+
+  <nav style="position: sticky; top: 0; height: 100vh; background: #0A2C4B; display: flex; flex-direction: column; align-items: center; padding-top: 16px; gap: 4px;">
+    <button type="button" style="width: 64px; min-height: 56px; border: none; border-radius: 16px; background: rgba(255,255,255,0.14); color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+      <span class="msr" style="font-size: 22px;">location_on</span>
+      <span style="font-size: 11px; font-weight: 600;">Locations</span>
+    </button>
+    <button type="button" style="width: 64px; min-height: 56px; border: none; border-radius: 16px; background: transparent; color: #9BAEC1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+      <span class="msr" style="font-size: 22px;">person_add</span>
+      <span style="font-size: 11px; font-weight: 600;">Invitations</span>
+    </button>
+  </nav>
+
+  <div style="display: flex; flex-direction: column; min-width: 0;" data-screen-label="Location - Google Sheet">
+
+    <header style="position: sticky; top: 0; z-index: 2; height: 64px; background: #0F3B63; display: flex; align-items: center; gap: 16px; padding: 0 24px;">
+      <button type="button" aria-label="Back to location" style="width: 48px; height: 48px; margin-left: -12px; border-radius: 999px; border: none; background: transparent; color: #FFFFFF; display: grid; place-items: center; flex-shrink: 0;">
+        <span class="msr" style="font-size: 22px;">arrow_back</span>
+      </button>
+      <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center;">
+        <span style="font-size: 12px; line-height: 14px; color: #9BAEC1;">Cantonement hill</span>
+        <h1 style="margin: 0; font-size: 18px; line-height: 22px; font-weight: 600; color: #FFFFFF; font-family: Archivo, Helvetica, sans-serif;">Google Sheet</h1>
+      </div>
+      <button type="button" style="height: 40px; padding: 0 20px; border-radius: 999px; border: none; background: #FFFFFF; color: #0A2C4B; font-size: 14px; font-weight: 600;">Save connection</button>
+      <span style="font-size: 14px; color: #CFE1F2;">paul@novalane.com</span>
+      <button type="button" style="height: 40px; padding: 0 20px; border-radius: 999px; border: 1px solid #7BA1C6; background: transparent; color: #FFFFFF; font-size: 14px; font-weight: 600;">Sign out</button>
+    </header>
+
+    <main style="flex: 1; padding: 32px; display: flex; justify-content: center; min-width: 0;">
+      <div style="width: 100%; max-width: 720px; display: flex; flex-direction: column; gap: 40px;">
+
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #D2500F;">Sea Rescue Fremantle</div>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #47586A;">Visitor records for this location are written to a Google Sheet your organisation owns.</p>
+        </div>
+
+        <section style="display: flex; flex-direction: column; gap: 12px;">
+          <h2 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 18px; font-weight: 600;">Currently connected</h2>
+          <div style="border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; padding: 20px; display: flex; align-items: flex-start; gap: 16px;">
+            <span class="msr" style="font-size: 28px; color: #1E7A46; flex-shrink: 0;">table_chart</span>
+            <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
+              <a href="#" style="font-size: 16px; font-weight: 600; color: #101C27; text-decoration: none;">Cantonement hill visitor records</a>
+              <span style="font-size: 14px; color: #47586A;">Sheet1 · Last synced 20 Aug 2026, 0912</span>
+            </div>
+            <span style="height: 28px; padding: 0 12px; border-radius: 999px; background: #D3EBDD; color: #0B3D24; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;">
+              <span class="msr" style="font-size: 16px;">check_circle</span>
+              Connected
+            </span>
+          </div>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 20px; padding-top: 8px; border-top: 1px solid #DDE5EB;">
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <h2 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 18px; font-weight: 600;">Replace the sheet</h2>
+            <p style="margin: 0; font-size: 14px; line-height: 20px; color: #47586A;">Paste the link to a different Google Sheet. It must be shared with the organisation's service account with edit access.</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column;">
+            <label for="sheet-id" style="font-size: 14px; font-weight: 600; color: #101C27; margin-bottom: 8px;">Google Sheet ID</label>
+            <input id="sheet-id" class="field" type="text" required placeholder="1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms" style="height: 56px; padding: 0 16px; border-radius: 8px; border: 1px solid #7A8B9B; background: #FFFFFF; font-size: 16px; color: #101C27; font-family: 'JetBrains Mono', monospace;">
+            <div style="min-height: 22px; padding: 4px 16px 0; font-size: 14px; color: #47586A;">Found in the sheet's URL, between /d/ and /edit.</div>
+          </div>
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 12px; padding-top: 8px; border-top: 1px solid #DDE5EB;">
+          <h2 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 18px; font-weight: 600;">Disconnect</h2>
+          <p style="margin: 0; font-size: 14px; line-height: 20px; color: #47586A; max-width: 560px;">New visitor records won't be saved anywhere until a new sheet is connected. Existing rows in the current sheet are untouched.</p>
+          <div>
+            <button type="button" style="height: 40px; padding: 0 20px; border-radius: 999px; border: 1px solid #B3261E; background: transparent; color: #B3261E; font-size: 14px; font-weight: 600;">Disconnect sheet</button>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

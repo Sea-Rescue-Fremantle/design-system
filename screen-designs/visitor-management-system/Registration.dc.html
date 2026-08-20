@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#FBFCFD">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FBFCFD"></rect>
+    <rect x="120" y="120" width="500" height="40" rx="8" fill="#0F3B63"></rect>
+    <rect x="120" y="220" width="960" height="64" rx="12" fill="#FFFFFF" stroke="#C8D3DD" stroke-width="2"></rect>
+    <rect x="120" y="310" width="960" height="64" rx="12" fill="#FFFFFF" stroke="#C8D3DD" stroke-width="2"></rect>
+  </svg>
+</template>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #FBFCFD; color: #101C27; font-family: "Source Sans 3", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  button { font-family: inherit; cursor: pointer; }
+  input, textarea { font-family: inherit; }
+  :focus-visible { outline: 2px solid #0F3B63; outline-offset: 2px; border-radius: 4px; }
+  .field::placeholder { color: #6D8298; }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; display: flex; justify-content: center; padding: 48px 32px;" data-screen-label="Registration">
+  <div style="width: 100%; max-width: 720px; display: flex; flex-direction: column; gap: 32px;">
+
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+      <h1 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 28px; line-height: 36px; font-weight: 600; color: #101C27;">Register your visit</h1>
+      <p style="margin: 0; font-size: 16px; line-height: 24px; color: #47586A;">Enter your details for Cantonement hill.</p>
+    </div>
+
+    <form style="display: flex; flex-direction: column; gap: 20px;">
+
+      <div style="display: flex; flex-direction: column;">
+        <label for="first-name" style="font-size: 14px; font-weight: 600; color: #101C27; margin-bottom: 8px;">First name</label>
+        <input id="first-name" class="field" type="text" required style="height: 56px; padding: 0 16px; border-radius: 8px; border: 1px solid #7A8B9B; background: #FFFFFF; font-size: 16px; color: #101C27;">
+        <div style="min-height: 22px; padding: 4px 16px 0; font-size: 14px; color: #47586A;"></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label for="last-name" style="font-size: 14px; font-weight: 600; color: #101C27; margin-bottom: 8px;">Last name</label>
+        <input id="last-name" class="field" type="text" required style="height: 56px; padding: 0 16px; border-radius: 8px; border: 1px solid #7A8B9B; background: #FFFFFF; font-size: 16px; color: #101C27;">
+        <div style="min-height: 22px; padding: 4px 16px 0; font-size: 14px; color: #47586A;"></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label for="organisation" style="font-size: 14px; font-weight: 600; color: #101C27; margin-bottom: 8px;">Organisation</label>
+        <input id="organisation" class="field" type="text" required style="height: 56px; padding: 0 16px; border-radius: 8px; border: 1px solid #7A8B9B; background: #FFFFFF; font-size: 16px; color: #101C27;">
+        <div style="min-height: 22px; padding: 4px 16px 0; font-size: 14px; color: #47586A;"></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label for="host" style="font-size: 14px; font-weight: 600; color: #101C27; margin-bottom: 8px;">Host</label>
+        <input id="host" class="field" type="text" required style="height: 56px; padding: 0 16px; border-radius: 8px; border: 1px solid #7A8B9B; background: #FFFFFF; font-size: 16px; color: #101C27;">
+        <div style="min-height: 22px; padding: 4px 16px 0; font-size: 14px; color: #47586A;"></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+        <label for="visit-reason" style="font-size: 14px; font-weight: 600; color: #101C27; margin-bottom: 8px;">Visit reason <span style="font-weight: 400; color: #6D8298;">(optional)</span></label>
+        <textarea id="visit-reason" class="field" rows="2" style="padding: 14px 16px; border-radius: 8px; border: 1px solid #7A8B9B; background: #FFFFFF; font-size: 16px; color: #101C27; resize: none;"></textarea>
+        <div style="min-height: 22px; padding: 4px 16px 0; font-size: 14px; color: #47586A;"></div>
+      </div>
+
+      <label style="display: flex; align-items: flex-start; gap: 12px; min-height: 48px; padding: 8px 0; cursor: pointer;">
+        <input type="checkbox" required style="width: 20px; height: 20px; margin: 2px 0 0; flex-shrink: 0; accent-color: #0F3B63;">
+        <span style="font-size: 15px; line-height: 22px; color: #101C27;">I accept the privacy notice: your personal information is collected to record attendance and support site safety. Visitor records are retained in the organisation's nominated Google Sheet.</span>
+      </label>
+
+      <div style="display: flex; justify-content: flex-end; align-items: center; gap: 16px;">
+        <button type="button" style="height: 40px; padding: 0 12px; border: none; background: transparent; color: #0F3B63; font-size: 14px; font-weight: 600;">Back</button>
+        <button type="submit" style="height: 40px; padding: 0 24px; border-radius: 999px; border: none; background: #0F3B63; color: #FFFFFF; font-size: 14px; font-weight: 600;">Submit registration</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
