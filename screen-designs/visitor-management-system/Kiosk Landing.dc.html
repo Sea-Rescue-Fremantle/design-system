@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<template id="__bundler_thumbnail" data-bg-color="#0F3B63">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0F3B63"></rect>
+    <circle cx="600" cy="330" r="140" fill="#FFFFFF"></circle>
+    <rect x="450" y="560" width="300" height="26" rx="13" fill="#E2691F"></rect>
+  </svg>
+</template>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=swap" rel="stylesheet">
+<style>
+  html, body { height: 100%; }
+  body { margin: 0; background: #06233E; color: #101C27; font-family: "Source Sans 3", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; }
+  * { box-sizing: border-box; }
+  a { color: #0F3B63; text-decoration: none; }
+  a:hover { color: #0A2C4B; }
+  button { font-family: inherit; cursor: pointer; }
+  :focus-visible { outline: 3px solid #9EC5E8; outline-offset: 3px; border-radius: 8px; }
+  .msr { font-family: "Material Symbols Rounded"; font-weight: 400; font-style: normal; line-height: 1; letter-spacing: normal; display: inline-block; white-space: nowrap; -webkit-font-smoothing: antialiased; }
+</style>
+</helmet>
+
+<div style="position: relative; min-height: 100dvh; display: grid; place-items: center; background: radial-gradient(120% 120% at 50% -10%, #0F3B63 0%, #06233E 55%, #06233E 100%); padding: 32px; padding-bottom: 80px;">
+
+  <button type="button" style="position: absolute; top: 24px; left: 24px; height: 48px; padding: 0 20px 0 16px; border-radius: 999px; border: 1px solid #334656; background: rgba(255,255,255,0.04); color: #B3C1CE; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+    <span class="msr" style="font-size: 20px;">location_on</span>
+    Change location
+  </button>
+
+  <button type="button" style="position: absolute; top: 24px; right: 24px; height: 48px; padding: 0 20px; border-radius: 999px; border: 1px solid #334656; background: rgba(255,255,255,0.04); color: #B3C1CE; font-size: 14px; font-weight: 600;">
+    Staff sign in
+  </button>
+
+  <div style="width: 100%; max-width: 640px; display: flex; flex-direction: column; align-items: center; gap: 40px;">
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+      <div style="width: 88px; height: 88px; border-radius: 999px; background: #FFFFFF; display: grid; place-items: center; box-shadow: 0 12px 32px rgba(4,14,26,0.4);">
+        <span class="msr" style="font-size: 44px; color: #0F3B63;">directions_boat</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #7BA1C6;">Sea Rescue Fremantle</div>
+        <div style="font-size: 15px; font-weight: 600; color: #E4EBF1;">Cantonement Hill</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;">
+      <h1 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 40px; line-height: 48px; font-weight: 600; letter-spacing: -0.01em; color: #FFFFFF; text-wrap: balance;">Welcome. Please register your visit.</h1>
+      <p style="margin: 0; max-width: 460px; font-size: 18px; line-height: 28px; color: #B3C1CE; text-wrap: pretty;">Registering helps us know who is on site if there's an emergency. It takes under a minute.</p>
+    </div>
+
+    <button type="button" style="width: 100%; max-width: 420px; height: 72px; border: none; border-radius: 999px; background: #FFFFFF; color: #0A2C4B; font-family: Archivo, Helvetica, sans-serif; font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 16px 32px rgba(4,14,26,0.35);">
+      Register
+      <span class="msr" style="font-size: 28px;">arrow_forward</span>
+    </button>
+
+    <button type="button" style="height: 48px; padding: 0 8px; border: none; background: transparent; color: #9EC5E8; font-size: 15px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">
+      I've already registered today
+    </button>
+
+  </div>
+
+  <div style="position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: center; pointer-events: none;">
+    <div style="font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #4A6076;">Location code CZBL59G</div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

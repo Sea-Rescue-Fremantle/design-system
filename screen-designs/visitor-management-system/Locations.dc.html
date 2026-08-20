@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<template id="__bundler_thumbnail" data-bg-color="#0F3B63">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0F3B63"></rect>
+    <rect x="120" y="120" width="260" height="560" rx="16" fill="#0A2C4B"></rect>
+    <rect x="420" y="120" width="660" height="80" rx="12" fill="#FFFFFF"></rect>
+    <rect x="420" y="230" width="500" height="24" rx="12" fill="#CFE1F2"></rect>
+    <rect x="420" y="280" width="340" height="18" rx="9" fill="#7BA1C6"></rect>
+  </svg>
+</template>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #FBFCFD; color: #101C27; font-family: "Source Sans 3", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  button { font-family: inherit; cursor: pointer; }
+  :focus-visible { outline: 2px solid #0F3B63; outline-offset: 2px; border-radius: 4px; }
+  .msr { font-family: "Material Symbols Rounded"; font-weight: 400; font-style: normal; line-height: 1; letter-spacing: normal; display: inline-block; white-space: nowrap; -webkit-font-smoothing: antialiased; }
+</style>
+</helmet>
+
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); min-height: 100vh; background: #FBFCFD;">
+
+  <nav style="position: sticky; top: 0; height: 100vh; background: #0A2C4B; display: flex; flex-direction: column; align-items: center; padding-top: 16px; gap: 4px;">
+    <button type="button" style="width: 64px; min-height: 56px; border: none; border-radius: 16px; background: rgba(255,255,255,0.14); color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+      <span class="msr" style="font-size: 22px;">location_on</span>
+      <span style="font-size: 11px; font-weight: 600;">Locations</span>
+    </button>
+    <button type="button" style="width: 64px; min-height: 56px; border: none; border-radius: 16px; background: transparent; color: #9BAEC1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+      <span class="msr" style="font-size: 22px;">person_add</span>
+      <span style="font-size: 11px; font-weight: 600;">Invitations</span>
+    </button>
+  </nav>
+
+  <div style="display: flex; flex-direction: column; min-width: 0;">
+
+    <header style="position: sticky; top: 0; z-index: 2; height: 64px; background: #0F3B63; display: flex; align-items: center; gap: 16px; padding: 0 24px;">
+      <h1 style="margin: 0; flex: 1; min-width: 0; font-size: 20px; font-weight: 600; color: #FFFFFF; font-family: Archivo, Helvetica, sans-serif;">Locations</h1>
+      <button type="button" style="height: 40px; padding: 0 20px; border-radius: 999px; border: none; background: #FFFFFF; color: #0A2C4B; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+        <span class="msr" style="font-size: 18px;">add</span>
+        Create location
+      </button>
+      <span style="font-size: 14px; color: #CFE1F2;">paul@novalane.com</span>
+      <button type="button" style="height: 40px; padding: 0 20px; border-radius: 999px; border: 1px solid #7BA1C6; background: transparent; color: #FFFFFF; font-size: 14px; font-weight: 600;">Sign out</button>
+    </header>
+
+    <main style="flex: 1; padding: 32px; display: flex; flex-direction: column; gap: 24px; min-width: 0;">
+
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #D2500F;">Sea Rescue Fremantle</div>
+        <p style="margin: 0; font-size: 16px; line-height: 24px; color: #47586A;">Create locations, connect Google Sheets, and manage visitor record setup.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 24px; align-items: start; flex: 1; min-width: 0;">
+
+        <div style="position: sticky; top: 96px; max-height: calc(100vh - 128px); overflow-y: auto; border: 1px solid #C8D3DD; border-radius: 16px; background: #FFFFFF; padding: 8px; display: flex; flex-direction: column; gap: 4px;">
+
+          <div style="padding: 16px; border-radius: 12px; background: #CFE1F2; display: flex; flex-direction: column; gap: 4px; cursor: pointer;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #06233E;">Cantonement hill</span>
+            </div>
+            <span style="font-size: 14px; color: #1C4A73;">123 smoth</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: #3C6C99;">2CZBL59G</span>
+          </div>
+
+          <div style="padding: 16px; border-radius: 12px; display: flex; flex-direction: column; gap: 4px; cursor: pointer;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #16283A;">test1</span>
+              <span style="height: 24px; padding: 0 10px; border-radius: 999px; border: 1px solid #C8D3DD; color: #47586A; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center;">Archived</span>
+            </div>
+            <span style="font-size: 14px; color: #47586A;">test</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: #6D8298;">DSZLQMTF</span>
+          </div>
+
+          <div style="padding: 16px; border-radius: 12px; display: flex; flex-direction: column; gap: 4px; cursor: pointer;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #16283A;">test2</span>
+              <span style="height: 24px; padding: 0 10px; border-radius: 999px; border: 1px solid #C8D3DD; color: #47586A; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center;">Archived</span>
+            </div>
+            <span style="font-size: 14px; color: #47586A;">tst</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: #6D8298;">7STRZHCH</span>
+          </div>
+
+          <div style="padding: 16px; border-radius: 12px; display: flex; flex-direction: column; gap: 4px; cursor: pointer;">
+            <span style="font-size: 16px; font-weight: 600; color: #16283A;">test3</span>
+            <span style="font-size: 14px; color: #47586A;">test3</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: #6D8298;">RCSFMZE5</span>
+          </div>
+
+          <div style="padding: 16px; border-radius: 12px; display: flex; flex-direction: column; gap: 4px; cursor: pointer;">
+            <span style="font-size: 16px; font-weight: 600; color: #16283A;">test4</span>
+            <span style="font-size: 14px; color: #47586A;">test3</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; color: #6D8298;">V7S6G25G</span>
+          </div>
+
+        </div>
+
+        <div style="min-width: 0; display: flex; flex-direction: column; gap: 24px; max-width: 680px;">
+
+          <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid #DDE5EB;">
+            <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.04em; color: #47586A;">2CZBL59G</span>
+              <h2 style="margin: 0; font-family: Archivo, Helvetica, sans-serif; font-size: 24px; line-height: 32px; font-weight: 600; color: #101C27;">Cantonement hill</h2>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <button type="button" style="height: 40px; padding: 0 20px; border-radius: 999px; border: 1px solid #0F3B63; background: transparent; color: #0F3B63; font-size: 14px; font-weight: 600;">Edit</button>
+              <button type="button" aria-label="More actions" style="width: 48px; height: 48px; border-radius: 999px; border: none; background: transparent; color: #47586A; display: grid; place-items: center;">
+                <span class="msr" style="font-size: 22px;">more_vert</span>
+              </button>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Address</span>
+              <span style="font-size: 16px; line-height: 24px; color: #101C27;">123 smoth</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Visitor instructions</span>
+              <span style="font-size: 16px; line-height: 24px; color: #101C27; text-wrap: pretty;">asasdasdsaadsasd</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #47586A;">Google Sheet</span>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="msr" style="font-size: 18px; color: #1E7A46;">table_chart</span>
+                <span style="font-size: 16px; line-height: 24px; color: #101C27;">Cantonement hill visitor records</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
